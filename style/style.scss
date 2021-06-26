@@ -1,0 +1,109 @@
+// Variables
+$box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+$padding-horizontal: 15%;
+
+$primary-color: rgb(253, 80, 80);
+$secondary-color: rgb(100, 82, 255);
+
+// Mixins
+@mixin flex($direction: row, $justify: center, $align: center) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+// Default styling
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+}
+
+// Body styling
+body {
+	width: 100%;
+	min-height: 100vh;
+	background: rgb(255, 255, 255);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+// Default elements styling
+a {
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+.h1 {
+	line-height: 130%;
+}
+
+.single-line {
+	display: inline-block;
+}
+
+// Navigation styling
+.navigation {
+	width: 100%;
+	min-height: auto;
+	@include flex();
+	box-shadow: $box-shadow;
+	padding: 1rem $padding-horizontal;
+}
+
+// Slogan
+.slogan {
+	width: 30%;
+	text-align: left;
+	color: $secondary-color;
+	position: relative;
+}
+
+.nav {
+	&--ul {
+		flex-grow: 1;
+		@include flex(row, flex-end);
+		flex-wrap: wrap;
+	}
+
+	&--li {
+		text-decoration: none;
+		list-style: none;
+		font-size: 1.1rem;
+		padding: 1rem;
+		cursor: pointer;
+		font-weight: 500;
+		color: $primary-color;
+		position: relative;
+
+		&:hover {
+			color: $secondary-color;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 10%;
+				height: 100%;
+				border: 1px solid $secondary-color;
+				border-right: none;
+			}
+	
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 10%;
+				height: 100%;
+				border: 1px solid $secondary-color;
+				border-left: none;
+			}
+		}
+	}
+}
