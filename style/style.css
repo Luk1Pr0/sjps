@@ -112,6 +112,24 @@ a {
           align-items: center;
 }
 
+.section--banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .navigation {
   width: 100%;
   min-height: auto;
@@ -260,5 +278,15 @@ a {
   width: 100%;
   text-align: center;
   margin: 2rem 0;
+}
+
+.banner {
+  width: 32rem;
+  height: 17rem;
+  margin: 2rem;
+  border-radius: 17rem;
+  background: #e6e6e6;
+  -webkit-box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
 }
 /*# sourceMappingURL=style.css.map */

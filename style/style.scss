@@ -114,6 +114,11 @@ a {
 	min-height: 40vh;
 	padding: 0 $padding-horizontal;
 	@include flex(row, space-between);
+
+	&--banner {
+		@include flex();
+		flex-wrap: wrap;
+	}
 }
 
 // Navigation styling
@@ -228,8 +233,19 @@ a {
 	}
 }
 
+// Btn container
 .btn__container {
 	width: 100%;
 	text-align: center;
 	margin: 2rem 0;
+}
+
+// Banner
+.banner {
+	width: 32rem;
+	height: 17rem;
+	margin: 2rem;
+	border-radius: 17rem;
+	background: $secondary-text-color;
+	box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
 }
