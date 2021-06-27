@@ -96,6 +96,7 @@ a {
 		height: 100%;
 		border-radius: 20px;
 		border: 2px solid $secondary-text-color;
+		pointer-events: none;
 	}
 
 	&:hover {
