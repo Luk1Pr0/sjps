@@ -34,6 +34,7 @@ body {
 	min-height: 100vh;
 	background: rgb(255, 255, 255);
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	overflow-x: hidden;
 }
 
 // Default elements styling
@@ -54,6 +55,15 @@ a {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
+
+	&--section {
+		width: 100%;
+		height: auto;
+	}
+
+	&--margin {
+		margin: 0 1rem;
+	}
 }
 
 .p {
@@ -100,6 +110,12 @@ a {
 	}
 }
 
+.section {
+	min-height: 40vh;
+	padding: 0 $padding-horizontal;
+	@include flex(row, space-between);
+}
+
 // Navigation styling
 .navigation {
 	width: 100%;
@@ -107,6 +123,8 @@ a {
 	@include flex();
 	box-shadow: $box-shadow;
 	padding: 1rem $padding-horizontal;
+	position: relative;
+	z-index: 2;
 }
 
 // Slogan
@@ -189,6 +207,13 @@ a {
 			width: 100%;
 			height: 100%;
 		}
+	}
+
+	&--section {
+		width: auto;
+		height: auto;
+		position: relative;
+		z-index: 1;
 	}
 }
 
