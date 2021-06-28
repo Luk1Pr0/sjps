@@ -65,6 +65,14 @@ a {
   font-size: 2rem;
 }
 
+.p--primary {
+  color: #fd5050;
+}
+
+.p--secondary {
+  color: #6452ff;
+}
+
 .btn {
   background: #6452ff;
   padding: 1.5rem 2rem;
@@ -120,6 +128,25 @@ a {
   left: 3%;
 }
 
+.btn--important {
+  background: #fd5050;
+  border: 2px solid #fd5050;
+  padding: 0.6rem;
+  border-radius: 10px;
+}
+
+.btn--important::before {
+  border-radius: 10px;
+  top: 3%;
+  left: 3%;
+}
+
+.btn--important:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #6452ff;
+}
+
 .section {
   min-height: 40vh;
   padding: 2rem 12%;
@@ -154,6 +181,21 @@ a {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.section--background {
+  background: url(https://parafiaslough.org/wp-content/uploads/2018/12/PA270886-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hr {
+  background: #fd5050;
+  border: 1px solid #fd5050;
+  outline: none;
+  margin: 1rem 0;
 }
 
 .navigation {
@@ -366,5 +408,36 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.footer {
+  width: 100%;
+  min-height: 20vh;
+  padding: 2rem 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.container--center {
+  margin: 0 1rem;
 }
 /*# sourceMappingURL=style.css.map */
