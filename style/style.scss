@@ -91,6 +91,14 @@ a {
 	&--secondary {
 		color: $secondary-color;
 	}
+
+	&--white {
+		color: white;
+	}
+
+	&--left {
+		text-align: left;
+	}
 }
 
 .btn {
@@ -166,6 +174,7 @@ a {
 	min-height: 40vh;
 	padding: 2rem $padding-horizontal;
 	@include flex(row, space-between);
+	position: relative;
 
 	&--banner {
 		@include flex();
@@ -178,6 +187,16 @@ a {
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.6);
+		}
 	}
 }
 
@@ -186,6 +205,15 @@ a {
 	border: 1px solid $primary-color;
 	outline: none;
 	margin: 1rem 0;
+	width: 100%;
+}
+
+.h3 {
+	font-size: 2.2rem;
+
+	&--address {
+		color: $primary-color;
+	}
 }
 
 // Navigation styling
@@ -346,6 +374,13 @@ a {
 	width: 100%;
 	height: auto;
 	@include flex(row, space-around, flex-end);
+	text-align: left;
+}
+
+// Column center elements
+.column-center {
+	width: 100%;
+	@include flex(column, space-around);
 }
 
 // Footer styling
@@ -353,14 +388,26 @@ a {
 	width: 100%;
 	min-height: 20vh;
 	padding: 2rem $padding-horizontal;
-	@include flex(row, space-between);
 }
 
+.footer__wrapper {
+	@include flex(row, space-between, flex-start);
+	width: 100%;
+}
+
+// Container styling
 .container {
 	flex-grow: 1;
 	width: 100%;
 	text-align: center;
+
 	&--center {
 		margin: 0 1rem;
+	}
+
+	&--address {
+		position: relative;
+		z-index: 3;
+		min-height: 50vh;
 	}
 }
