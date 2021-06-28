@@ -39,17 +39,30 @@ a {
 
 .img--section {
   width: 100%;
-  height: auto;
+  height: 30vh;
 }
 
 .img--margin {
   margin: 0 1rem;
 }
 
+.img--overlay {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
 .p {
   color: #141414;
   font-size: 1.2rem;
   line-height: 130%;
+}
+
+.p--img {
+  width: 100%;
+  text-align: center;
+  color: #e6e6e6;
+  font-size: 2rem;
 }
 
 .btn {
@@ -95,9 +108,21 @@ a {
   border: 2px solid #e6e6e6;
 }
 
+.btn--more {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.btn--more::before {
+  border-radius: 10px;
+  top: 3%;
+  left: 3%;
+}
+
 .section {
   min-height: 40vh;
-  padding: 0 12%;
+  padding: 2rem 12%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,6 +289,13 @@ a {
   z-index: 1;
 }
 
+.img__container--overlay {
+  width: 30%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .header__content {
   width: 35%;
   z-index: 2;
@@ -281,13 +313,58 @@ a {
   margin: 2rem 0;
 }
 
+.btn__container--small {
+  margin: 0;
+  width: auto;
+}
+
 .banner {
   width: 32rem;
-  height: 17rem;
+  min-height: 17rem;
   margin: 2rem;
   border-radius: 17rem;
   background: #e6e6e6;
   -webkit-box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.space-around {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 /*# sourceMappingURL=style.css.map */

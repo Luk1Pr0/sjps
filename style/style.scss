@@ -58,11 +58,17 @@ a {
 
 	&--section {
 		width: 100%;
-		height: auto;
+		height: 30vh;
 	}
 
 	&--margin {
 		margin: 0 1rem;
+	}
+
+	&--overlay {
+		width: 100%;
+		height: 100%;
+		background: white;
 	}
 }
 
@@ -70,6 +76,13 @@ a {
 	color: $primary-text-color;
 	font-size: 1.2rem;
 	line-height: 130%;
+
+	&--img {
+		width: 100%;
+		text-align: center;
+		color: $secondary-text-color;
+		font-size: 2rem;
+	}
 }
 
 .btn {
@@ -109,11 +122,23 @@ a {
 			border: 2px solid $secondary-text-color;
 		}
 	}
+
+	&--more {
+		padding: 0.6rem;
+		font-size: 1rem;
+		border-radius: 10px;
+
+		&::before {
+			border-radius: 10px;
+			top: 3%;
+			left: 3%;
+		}
+	}
 }
 
 .section {
 	min-height: 40vh;
-	padding: 0 $padding-horizontal;
+	padding: 2rem $padding-horizontal;
 	@include flex(row, space-between);
 
 	&--banner {
@@ -221,6 +246,12 @@ a {
 		position: relative;
 		z-index: 1;
 	}
+
+	&--overlay {
+		width: 30%;
+		height: auto;
+		object-fit: cover;
+	}
 }
 
 .header__content {
@@ -239,14 +270,39 @@ a {
 	width: 100%;
 	text-align: center;
 	margin: 2rem 0;
+
+	&--small {
+		margin: 0;
+		width: auto;
+	}
 }
 
 // Banner
 .banner {
 	width: 32rem;
-	height: 17rem;
+	min-height: 17rem;
 	margin: 2rem;
 	border-radius: 17rem;
 	background: $secondary-text-color;
 	box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+// Dark overlay
+.overlay {
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	@include flex(column, space-around);
+}
+
+// Space around box
+.space-around {
+	width: 100%;
+	height: auto;
+	@include flex(row, space-around, flex-end);
 }
