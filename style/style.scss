@@ -7,7 +7,7 @@ $secondary-color: rgb(100, 82, 255);
 $primary-text-color: rgb(20, 20, 20);
 $secondary-text-color: rgb(230, 230, 230);
 
-$transition: all 0.3s ease;
+$transition: 0.3s ease;
 
 // Mixins
 @mixin flex($direction: row, $justify: center, $align: center) {
@@ -98,6 +98,10 @@ a {
 
 	&--left {
 		text-align: left;
+	}
+
+	&--copyright {
+		font-size: 1rem;
 	}
 }
 
@@ -213,6 +217,34 @@ a {
 
 	&--address {
 		color: $primary-color;
+	}
+}
+
+.a {
+	font-size: 1.2rem;
+	color: $primary-color;
+	
+	position: relative;
+	display: inline-block;
+	
+	&::after {
+		content: '';
+		border-bottom: 2px solid red;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		transition: $transition;
+	}
+
+	&:hover::after {
+		width: 0%;
+	}
+
+	&--h1 {
+		&::after {
+			display: none;
+		}
 	}
 }
 
@@ -409,5 +441,9 @@ a {
 		position: relative;
 		z-index: 3;
 		min-height: 50vh;
+	}
+
+	&--copyright {
+		@include flex(row, space-around);
 	}
 }
