@@ -7,7 +7,7 @@ $secondary-color: rgb(100, 82, 255);
 $primary-text-color: rgb(20, 20, 20);
 $secondary-text-color: rgb(230, 230, 230);
 
-$transition: all 0.3s ease;
+$transition: 0.3s ease;
 
 // Mixins
 @mixin flex($direction: row, $justify: center, $align: center) {
@@ -99,6 +99,10 @@ a {
 	&--left {
 		text-align: left;
 	}
+
+	&--copyright {
+		font-size: 1rem;
+	}
 }
 
 .btn {
@@ -168,6 +172,25 @@ a {
 			background: $secondary-color;
 		}
 	}
+
+	&--submit {
+		border: none;
+		background: $secondary-color;
+		color: $secondary-text-color;
+		outline: none;
+		padding: 10px;
+		width: 60%;
+		font-size: 0.9rem;
+		cursor: pointer;
+		border: 1px solid $secondary-color;
+		transition: all $transition;
+
+		&:hover {
+			background: transparent;
+			border: 1px solid $secondary-color;
+			color: $secondary-color;
+		}
+	}
 }
 
 .section {
@@ -213,6 +236,58 @@ a {
 
 	&--address {
 		color: $primary-color;
+	}
+}
+
+.a {
+	font-size: 1.2rem;
+	color: $primary-color;
+	
+	position: relative;
+	display: inline-block;
+	
+	&::after {
+		content: '';
+		border-bottom: 2px solid red;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		transition: $transition;
+	}
+
+	&:hover::after {
+		width: 0%;
+	}
+
+	&--h1 {
+		&::after {
+			display: none;
+		}
+	}
+
+	&--social {
+		color: $secondary-color;
+		font-size: 1.2rem;
+
+		&::after {
+			border-bottom: 2px solid $secondary-color;
+		}
+	}
+}
+
+.input {
+	outline: none;
+	border: 1px solid $secondary-color;
+	width: 60%;
+	margin: 1rem;
+	padding: 5px;
+	color: $secondary-color;
+
+	&::placeholder {
+		font-size: 0.9rem;
+		color: $secondary-color;
+		text-align: left;
 	}
 }
 
@@ -344,6 +419,10 @@ a {
 		margin: 0;
 		width: auto;
 	}
+
+	&--submit {
+		margin: 0;
+	}
 }
 
 // Banner
@@ -410,4 +489,14 @@ a {
 		z-index: 3;
 		min-height: 50vh;
 	}
+
+	&--copyright {
+		@include flex(row, space-around);
+	}
+}
+
+// Input container style
+.input__contiainer {
+	width: auto;
+	height: auto;
 }
