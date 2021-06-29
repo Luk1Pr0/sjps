@@ -159,6 +159,26 @@ a {
   background: #6452ff;
 }
 
+.btn--submit {
+  border: none;
+  background: #6452ff;
+  color: #e6e6e6;
+  outline: none;
+  padding: 10px;
+  width: 60%;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid #6452ff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn--submit:hover {
+  background: transparent;
+  border: 1px solid #6452ff;
+  color: #6452ff;
+}
+
 .section {
   min-height: 40vh;
   padding: 2rem 12%;
@@ -254,6 +274,48 @@ a {
 
 .a--h1::after {
   display: none;
+}
+
+.a--social {
+  color: #6452ff;
+  font-size: 1.2rem;
+}
+
+.a--social::after {
+  border-bottom: 2px solid #6452ff;
+}
+
+.input {
+  outline: none;
+  border: 1px solid #6452ff;
+  width: 60%;
+  margin: 1rem;
+  padding: 5px;
+  color: #6452ff;
+}
+
+.input::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  color: #6452ff;
+  text-align: left;
+}
+
+.input:-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: #6452ff;
+  text-align: left;
+}
+
+.input::-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: #6452ff;
+  text-align: left;
+}
+
+.input::placeholder {
+  font-size: 0.9rem;
+  color: #6452ff;
+  text-align: left;
 }
 
 .navigation {
@@ -418,6 +480,10 @@ a {
   width: auto;
 }
 
+.btn__container--submit {
+  margin: 0;
+}
+
 .banner {
   width: 32rem;
   min-height: 17rem;
@@ -539,5 +605,10 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.input__contiainer {
+  width: auto;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */

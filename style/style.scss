@@ -172,6 +172,25 @@ a {
 			background: $secondary-color;
 		}
 	}
+
+	&--submit {
+		border: none;
+		background: $secondary-color;
+		color: $secondary-text-color;
+		outline: none;
+		padding: 10px;
+		width: 60%;
+		font-size: 0.9rem;
+		cursor: pointer;
+		border: 1px solid $secondary-color;
+		transition: all $transition;
+
+		&:hover {
+			background: transparent;
+			border: 1px solid $secondary-color;
+			color: $secondary-color;
+		}
+	}
 }
 
 .section {
@@ -245,6 +264,30 @@ a {
 		&::after {
 			display: none;
 		}
+	}
+
+	&--social {
+		color: $secondary-color;
+		font-size: 1.2rem;
+
+		&::after {
+			border-bottom: 2px solid $secondary-color;
+		}
+	}
+}
+
+.input {
+	outline: none;
+	border: 1px solid $secondary-color;
+	width: 60%;
+	margin: 1rem;
+	padding: 5px;
+	color: $secondary-color;
+
+	&::placeholder {
+		font-size: 0.9rem;
+		color: $secondary-color;
+		text-align: left;
 	}
 }
 
@@ -376,6 +419,10 @@ a {
 		margin: 0;
 		width: auto;
 	}
+
+	&--submit {
+		margin: 0;
+	}
 }
 
 // Banner
@@ -446,4 +493,10 @@ a {
 	&--copyright {
 		@include flex(row, space-around);
 	}
+}
+
+// Input container style
+.input__contiainer {
+	width: auto;
+	height: auto;
 }
