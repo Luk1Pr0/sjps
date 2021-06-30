@@ -52,6 +52,14 @@ a {
   background: white;
 }
 
+.img--rounded {
+  border-radius: 50%;
+}
+
+.img--border {
+  border: 5px solid white;
+}
+
 .p {
   color: #141414;
   font-size: 1.2rem;
@@ -83,6 +91,10 @@ a {
 
 .p--copyright {
   font-size: 1rem;
+}
+
+.p--subtitle {
+  font-size: 1.5rem;
 }
 
 .btn {
@@ -484,14 +496,30 @@ a {
   margin: 0;
 }
 
+.btn__container--no-margin {
+  margin: 0;
+}
+
 .banner {
   width: 32rem;
-  min-height: 17rem;
+  min-height: 20rem;
   margin: 2rem;
-  border-radius: 17rem;
+  border-radius: 9rem;
   background: #e6e6e6;
   -webkit-box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .overlay {
@@ -605,6 +633,25 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.container--space-evenly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 .input__contiainer {
