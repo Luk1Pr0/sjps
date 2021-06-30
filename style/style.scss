@@ -523,3 +523,9 @@ a {
 	width: auto;
 	height: auto;
 }
+
+.text {
+	&--blue {
+		color: $secondary-color;
+	}
+}
