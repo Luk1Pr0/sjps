@@ -9,6 +9,8 @@ $secondary-text-color: rgb(230, 230, 230);
 
 $transition: 0.3s ease;
 
+$medium-display: 1140px;
+
 // Mixins
 @mixin flex($direction: row, $justify: center, $align: center) {
 	display: flex;
@@ -232,6 +234,15 @@ a {
 			height: 100%;
 			background: rgba(0, 0, 0, 0.6);
 		}
+
+		@media screen and (max-width: $medium-display) {
+			background-attachment: scroll;
+		}
+	}
+
+	@media screen and (max-width: $medium-display) {
+		@include flex(column);
+		padding: $padding-horizontal;
 	}
 }
 
@@ -375,6 +386,11 @@ a {
 	min-height: 70vh;
 	background: rgb(71, 211, 164);
 	@include flex(row, space-between, center);
+
+	@media screen and (max-width: $medium-display) {
+		padding: $padding-horizontal 0;
+		@include flex(column);
+	}
 }
 
 .img__container {
@@ -394,6 +410,10 @@ a {
 			width: 100%;
 			height: 100%;
 		}
+
+		@media screen and (max-width: $medium-display) {
+			width: 70%;
+		}
 	}
 
 	&--section {
@@ -401,6 +421,10 @@ a {
 		height: auto;
 		position: relative;
 		z-index: 1;
+		
+		@media screen and (max-width: $medium-display) {
+			width: 100%;
+		}
 	}
 
 	&--overlay {
@@ -418,6 +442,11 @@ a {
 		font-size: 3rem;
 		color: $secondary-text-color;
 		margin: 1rem 0;
+	}
+
+	@media screen and (max-width: $medium-display) {
+		width: 70%;
+		margin-top: 1rem;
 	}
 }
 
@@ -451,6 +480,14 @@ a {
 	box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
 	
 	@include flex(column, space-around);
+
+	
+	@media screen and (max-width: $medium-display) {
+		width: 100%;
+		margin: 1rem 0;
+		border-radius: 6rem;
+		padding: 1rem;
+	}
 }
 
 // Dark overlay
@@ -515,6 +552,10 @@ a {
 	&--space-evenly {
 		@include flex(row, space-evenly);
 		flex-grow: 0;
+	}
+
+	&--description {
+		margin: 2rem 0;
 	}
 }
 

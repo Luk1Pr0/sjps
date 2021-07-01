@@ -246,6 +246,31 @@ a {
   background: rgba(0, 0, 0, 0.6);
 }
 
+@media screen and (max-width: 1140px) {
+  .section--background {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 12%;
+  }
+}
+
 .hr {
   background: #fd5050;
   border: 1px solid #fd5050;
@@ -438,6 +463,25 @@ a {
           align-items: center;
 }
 
+@media screen and (max-width: 1140px) {
+  .header {
+    padding: 12% 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .img__container--header {
   width: 60%;
   height: 50vh;
@@ -456,11 +500,23 @@ a {
   height: 100%;
 }
 
+@media screen and (max-width: 1140px) {
+  .img__container--header {
+    width: 70%;
+  }
+}
+
 .img__container--section {
   width: auto;
   height: auto;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (max-width: 1140px) {
+  .img__container--section {
+    width: 100%;
+  }
 }
 
 .img__container--overlay {
@@ -479,6 +535,13 @@ a {
   font-size: 3rem;
   color: #e6e6e6;
   margin: 1rem 0;
+}
+
+@media screen and (max-width: 1140px) {
+  .header__content {
+    width: 70%;
+    margin-top: 1rem;
+  }
 }
 
 .btn__container {
@@ -520,6 +583,15 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1140px) {
+  .banner {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 6rem;
+    padding: 1rem;
+  }
 }
 
 .overlay {
@@ -652,6 +724,10 @@ a {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
+}
+
+.container--description {
+  margin: 2rem 0;
 }
 
 .input__contiainer {
