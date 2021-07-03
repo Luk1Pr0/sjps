@@ -173,21 +173,23 @@ a {
 	}
 
 	&--burger {
-		width: 3rem;
-		height: 3rem;
-		border-radius: 0;
-		background: $secondary-color;
-		position: absolute;
-		right: 1rem;
-		padding: 5px;
-		@include flex(column);
+		display: none;
 
-		&::before {
-			display: none;
-		}
-
-		&:hover {
+		@media screen and (max-width: $medium-display) {
+			width: 3rem;
+			height: 3rem;
+			border-radius: 0;
 			background: $secondary-color;
+			padding: 5px;
+			@include flex(column);
+	
+			&::before {
+				display: none;
+			}
+	
+			&:hover {
+				background: $secondary-color;
+			}
 		}
 	}
 
@@ -367,6 +369,8 @@ a {
 
 	@media screen and (max-width: $medium-display) {
 		padding: 1rem;
+		@include flex(row, center, flex-center);
+		position: relative;
 	}
 }
 
@@ -652,4 +656,9 @@ a {
 	&--blue {
 		color: $secondary-color;
 	}
+}
+
+// Burger btn container
+.burger__container {
+	position: relative;
 }
