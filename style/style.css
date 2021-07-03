@@ -26,6 +26,18 @@ a {
   line-height: 130%;
 }
 
+@media screen and (max-width: 1140px) {
+  .h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .h2 {
+    font-size: 1.5rem;
+  }
+}
+
 .single-line {
   display: inline-block;
 }
@@ -140,6 +152,44 @@ a {
   border: 2px solid #e6e6e6;
 }
 
+@media screen and (max-width: 1140px) {
+  .btn {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+}
+
+.btn--burger {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0;
+  background: #6452ff;
+  position: absolute;
+  right: 1rem;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn--burger::before {
+  display: none;
+}
+
+.btn--burger:hover {
+  background: #6452ff;
+}
+
 .btn--more {
   padding: 0.6rem;
   font-size: 1rem;
@@ -189,6 +239,13 @@ a {
   background: transparent;
   border: 1px solid #6452ff;
   color: #6452ff;
+}
+
+.line {
+  width: 60%;
+  height: 5%;
+  background: white;
+  margin: 0.2rem;
 }
 
 .section {
@@ -378,11 +435,23 @@ a {
   z-index: 2;
 }
 
+@media screen and (max-width: 1140px) {
+  .navigation {
+    padding: 1rem;
+  }
+}
+
 .slogan {
   width: 30%;
   text-align: left;
   color: #6452ff;
   position: relative;
+}
+
+@media screen and (max-width: 1140px) {
+  .slogan {
+    width: 100%;
+  }
 }
 
 .nav--ul {
@@ -404,6 +473,12 @@ a {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1140px) {
+  .nav--ul {
+    display: none;
+  }
 }
 
 .nav--li {
@@ -482,6 +557,12 @@ a {
   }
 }
 
+@media screen and (max-width: 1140px) {
+  .img__container--slogan {
+    width: 7rem;
+  }
+}
+
 .img__container--header {
   width: 60%;
   height: 50vh;
@@ -502,7 +583,8 @@ a {
 
 @media screen and (max-width: 1140px) {
   .img__container--header {
-    width: 70%;
+    width: 80%;
+    height: 30vh;
   }
 }
 
@@ -516,6 +598,10 @@ a {
 @media screen and (max-width: 1140px) {
   .img__container--section {
     width: 100%;
+    margin: 1rem;
+  }
+  .img__container--section:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -561,6 +647,10 @@ a {
 
 .btn__container--no-margin {
   margin: 0;
+}
+
+.btn__container--margin-bottom-0 {
+  margin-bottom: 0;
 }
 
 .banner {
@@ -674,6 +764,24 @@ a {
   width: 100%;
 }
 
+@media screen and (max-width: 1140px) {
+  .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .container {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -684,6 +792,12 @@ a {
 
 .container--center {
   margin: 0 1rem;
+}
+
+@media screen and (max-width: 1140px) {
+  .container--center {
+    margin: 3rem 0;
+  }
 }
 
 .container--address {
@@ -705,6 +819,25 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1140px) {
+  .container--copyright {
+    min-height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .container--space-evenly {
@@ -730,7 +863,7 @@ a {
   margin: 2rem 0;
 }
 
-.input__contiainer {
+.input__container {
   width: auto;
   height: auto;
 }

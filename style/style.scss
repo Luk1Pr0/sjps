@@ -47,6 +47,16 @@ a {
 
 .h1 {
 	line-height: 130%;
+
+	@media screen and (max-width: $medium-display) {
+		font-size: 1.5rem;
+	}
+}
+
+.h2 {
+	@media screen and (max-width: $medium-display) {
+		font-size: 1.5rem;
+	}
 }
 
 .single-line {
@@ -157,6 +167,30 @@ a {
 		}
 	}
 
+	@media screen and (max-width: $medium-display) {
+		font-size: 1rem;
+		padding: 1.2rem;
+	}
+
+	&--burger {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 0;
+		background: $secondary-color;
+		position: absolute;
+		right: 1rem;
+		padding: 5px;
+		@include flex(column);
+
+		&::before {
+			display: none;
+		}
+
+		&:hover {
+			background: $secondary-color;
+		}
+	}
+
 	&--more {
 		padding: 0.6rem;
 		font-size: 1rem;
@@ -205,6 +239,13 @@ a {
 			color: $secondary-color;
 		}
 	}
+}
+
+.line {
+	width: 60%;
+	height: 5%;
+	background: white;
+	margin: 0.2rem;
 }
 
 .section {
@@ -323,6 +364,10 @@ a {
 	padding: 1rem $padding-horizontal;
 	position: relative;
 	z-index: 2;
+
+	@media screen and (max-width: $medium-display) {
+		padding: 1rem;
+	}
 }
 
 // Slogan
@@ -331,6 +376,10 @@ a {
 	text-align: left;
 	color: $secondary-color;
 	position: relative;
+
+	@media screen and (max-width: $medium-display) {
+			width: 100%;
+	}
 }
 
 // Navigation
@@ -339,6 +388,10 @@ a {
 		flex-grow: 1;
 		@include flex(row, flex-end);
 		flex-wrap: wrap;
+
+		@media screen and (max-width: $medium-display) {
+			display: none;
+		}
 	}
 
 	&--li {
@@ -394,6 +447,13 @@ a {
 }
 
 .img__container {
+
+	&--slogan {
+		@media screen and (max-width: $medium-display) {
+			width: 7rem;
+		}		
+	}
+
 	&--header {
 		width: 60%;
 		height: 50vh;
@@ -412,7 +472,8 @@ a {
 		}
 
 		@media screen and (max-width: $medium-display) {
-			width: 70%;
+			width: 80%;
+			height: 30vh;
 		}
 	}
 
@@ -424,6 +485,11 @@ a {
 		
 		@media screen and (max-width: $medium-display) {
 			width: 100%;
+			margin: 1rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -467,6 +533,10 @@ a {
 
 	&--no-margin {
 		margin: 0;
+	}
+
+	&--margin-bottom-0 {
+		margin-bottom: 0;
 	}
 }
 
@@ -527,6 +597,10 @@ a {
 .footer__wrapper {
 	@include flex(row, space-between, flex-start);
 	width: 100%;
+
+	@media screen and (max-width: $medium-display) {
+		@include flex(column);
+	}
 }
 
 // Container styling
@@ -537,6 +611,10 @@ a {
 
 	&--center {
 		margin: 0 1rem;
+
+		@media screen and (max-width: $medium-display) {
+			margin: 3rem 0;
+		}
 	}
 
 	&--address {
@@ -547,6 +625,11 @@ a {
 
 	&--copyright {
 		@include flex(row, space-around);
+
+		@media screen and (max-width: $medium-display) {
+			min-height: 10vh;
+			@include flex(column, space-between, flex-start);
+		}
 	}
 
 	&--space-evenly {
@@ -560,7 +643,7 @@ a {
 }
 
 // Input container style
-.input__contiainer {
+.input__container {
 	width: auto;
 	height: auto;
 }
