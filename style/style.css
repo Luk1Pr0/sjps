@@ -645,7 +645,12 @@ a[href^="tel"] {
   font-weight: 500;
   position: relative;
   margin: 1px;
-  width: 70%;
+}
+
+@media screen and (max-width: 1140px) {
+  .nav--li {
+    width: 70%;
+  }
 }
 
 .header {
@@ -744,7 +749,6 @@ a[href^="tel"] {
 
 .img__container--stretch {
   width: 100%;
-  background: red;
 }
 
 .header__content {

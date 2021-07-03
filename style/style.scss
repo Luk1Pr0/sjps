@@ -528,7 +528,10 @@ a[href^="tel"] {
 		font-weight: 500;
 		position: relative;
 		margin: 1px;
-		width: 70%;
+
+		@media screen and (max-width: $medium-display) {
+			width: 70%;
+		}
 	}
 }
 
@@ -601,7 +604,6 @@ a[href^="tel"] {
 
 	&--stretch {
 		width: 100%;
-		background: red;
 	}
 }
 
