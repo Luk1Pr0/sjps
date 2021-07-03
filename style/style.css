@@ -741,6 +741,24 @@ a {
   text-align: left;
 }
 
+@media screen and (max-width: 1140px) {
+  .space-around {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .column-center {
   width: 100%;
   display: -webkit-box;
@@ -879,6 +897,13 @@ a {
   margin: 2rem 0;
 }
 
+.container--map {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  z-index: 3;
+}
+
 .input__container {
   width: auto;
   height: auto;
@@ -890,5 +915,11 @@ a {
 
 .burger__container {
   position: relative;
+}
+
+.map {
+  width: 100%;
+  height: 50vh;
+  border: 0;
 }
 /*# sourceMappingURL=style.css.map */
