@@ -435,6 +435,19 @@ a[href^="tel"] {
   text-align: left;
 }
 
+.slogan {
+  width: 30%;
+  text-align: left;
+  color: #6452ff;
+  position: relative;
+}
+
+@media screen and (max-width: 1140px) {
+  .slogan {
+    width: 100%;
+  }
+}
+
 .navigation {
   width: 100%;
   min-height: auto;
@@ -475,19 +488,7 @@ a[href^="tel"] {
         -ms-flex-align: flex-center;
             align-items: flex-center;
     position: relative;
-  }
-}
-
-.slogan {
-  width: 30%;
-  text-align: left;
-  color: #6452ff;
-  position: relative;
-}
-
-@media screen and (max-width: 1140px) {
-  .slogan {
-    width: 100%;
+    z-index: 5;
   }
 }
 
@@ -510,11 +511,44 @@ a[href^="tel"] {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 @media screen and (max-width: 1140px) {
   .nav--ul {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    background: white;
+    top: 101%;
+    width: 100%;
+    padding: 1rem 0;
+    opacity: 1;
+    overflow: auto;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .nav--hidden {
+    overflow: hidden;
+    -webkit-transform: translateY(50%) rotate(90deg);
+            transform: translateY(50%) rotate(90deg);
   }
 }
 
@@ -527,6 +561,14 @@ a[href^="tel"] {
   font-weight: 500;
   color: #fd5050;
   position: relative;
+  margin: 1px;
+}
+
+@media screen and (max-width: 1140px) {
+  .nav--li {
+    width: 95%;
+    text-align: center;
+  }
 }
 
 .nav--li:hover {
@@ -552,6 +594,32 @@ a[href^="tel"] {
   width: 10%;
   height: 100%;
   border: 1px solid #6452ff;
+  border-left: none;
+}
+
+.nav--active {
+  color: #141414;
+}
+
+.nav--active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  border: 1px solid #141414;
+  border-right: none;
+}
+
+.nav--active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  border: 1px solid #141414;
   border-left: none;
 }
 
