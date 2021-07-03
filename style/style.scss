@@ -315,8 +315,10 @@ a {
 	
 	position: relative;
 	display: inline-block;
-	
-	&::after {
+
+
+	&--h1 {
+		&::after {
 		content: '';
 		border-bottom: 2px solid red;
 		position: absolute;
@@ -324,13 +326,12 @@ a {
 		bottom: 0;
 		width: 100%;
 		transition: $transition;
-	}
+		}
 
-	&:hover::after {
-		width: 0%;
-	}
+		&:hover::after {
+			width: 0%;
+		}
 
-	&--h1 {
 		&::after {
 			display: none;
 		}
@@ -339,6 +340,20 @@ a {
 	&--social {
 		color: $secondary-color;
 		font-size: 1.2rem;
+
+		&::after {
+			content: '';
+			border-bottom: 2px solid red;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			transition: $transition;
+		}
+
+		&:hover::after {
+			width: 0%;
+		}
 
 		&::after {
 			border-bottom: 2px solid $secondary-color;
@@ -352,6 +367,76 @@ a {
 			pointer-events: none;
 			top: 1.7rem;
 			border-bottom: 2px solid $secondary-text-color;
+		}
+	}
+
+	&--link {
+		text-decoration: none;
+		list-style: none;
+		font-size: 1.1rem;
+		padding: 1rem;
+		cursor: pointer;
+		font-weight: 500;
+		color: $primary-color;
+		position: relative;
+		margin: 1px;
+
+		@media screen and (max-width: $medium-display) {
+			width: 95%;
+			text-align: center;
+		}
+
+		&:hover {
+			color: $secondary-color;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 10%;
+				height: 100%;
+				border: 1px solid $secondary-color;
+				border-right: none;
+			}
+	
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 10%;
+				height: 100%;
+				border: 1px solid $secondary-color;
+				border-left: none;
+			}
+		}
+
+	}
+
+	&--active {
+		color: $primary-text-color;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 10%;
+			height: 100%;
+			border: 1px solid $primary-text-color;
+			border-right: none;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 10%;
+			height: 100%;
+			border: 1px solid $primary-text-color;
+			border-left: none;
 		}
 	}
 }
@@ -439,70 +524,11 @@ a[href^="tel"] {
 	&--li {
 		text-decoration: none;
 		list-style: none;
-		font-size: 1.1rem;
-		padding: 1rem;
 		cursor: pointer;
 		font-weight: 500;
-		color: $primary-color;
 		position: relative;
 		margin: 1px;
-		
-		@media screen and (max-width: $medium-display) {
-			width: 95%;
-			text-align: center;
-		}
-
-		&:hover {
-			color: $secondary-color;
-
-			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 10%;
-				height: 100%;
-				border: 1px solid $secondary-color;
-				border-right: none;
-			}
-	
-			&::after {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 10%;
-				height: 100%;
-				border: 1px solid $secondary-color;
-				border-left: none;
-			}
-		}
-	}
-
-	&--active {
-		color: $primary-text-color;
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 10%;
-			height: 100%;
-			border: 1px solid $primary-text-color;
-			border-right: none;
-		}
-
-		&::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 10%;
-			height: 100%;
-			border: 1px solid $primary-text-color;
-			border-left: none;
-		}
+		width: 70%;
 	}
 }
 
@@ -571,6 +597,11 @@ a[href^="tel"] {
 		width: 30%;
 		height: auto;
 		object-fit: cover;
+	}
+
+	&--stretch {
+		width: 100%;
+		background: red;
 	}
 }
 
@@ -713,6 +744,10 @@ a[href^="tel"] {
 	&--space-evenly {
 		@include flex(row, space-evenly);
 		flex-grow: 0;
+
+		@media screen and (max-width: $medium-display) {
+			@include flex(column);
+		}
 	}
 
 	&--description {
@@ -748,4 +783,17 @@ a[href^="tel"] {
 	width: 100%;
 	height: 50vh;
 	border: 0;
+}
+
+// Margin
+.margin {
+	margin: 1rem;
+
+	&--left-right {
+		margin: 0 1rem;
+	}
+
+	&--top-bottom {
+		margin: 1rem 0;
+	}
 }
