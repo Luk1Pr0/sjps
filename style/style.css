@@ -109,6 +109,10 @@ a {
   font-size: 1.5rem;
 }
 
+.p--address {
+  font-size: 1.5rem;
+}
+
 .btn {
   background: #6452ff;
   padding: 1.5rem 2rem;
@@ -379,6 +383,23 @@ a {
 
 .a--social::after {
   border-bottom: 2px solid #6452ff;
+}
+
+.a--default {
+  color: #e6e6e6;
+}
+
+.a--default::after {
+  pointer-events: none;
+  top: 1.7rem;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+a[href^="tel"] {
+  color: inherit;
+  /* Inherit text color of parent element. */
+  text-decoration: none;
+  /* Remove underline. */
 }
 
 .input {

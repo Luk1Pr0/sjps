@@ -127,6 +127,10 @@ a {
 	&--subtitle {
 		font-size: 1.5rem;
 	}
+
+	&--address {
+		font-size: 1.5rem;
+	}
 }
 
 .btn {
@@ -340,7 +344,22 @@ a {
 			border-bottom: 2px solid $secondary-color;
 		}
 	}
+
+	&--default {
+		color: $secondary-text-color;
+
+		&::after {
+			pointer-events: none;
+			top: 1.7rem;
+			border-bottom: 2px solid $secondary-text-color;
+		}
+	}
 }
+
+a[href^="tel"] {
+	color: inherit; /* Inherit text color of parent element. */
+	text-decoration: none; /* Remove underline. */
+  }
 
 .input {
 	outline: none;
