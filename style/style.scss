@@ -54,6 +54,12 @@ a {
 }
 
 .h2 {
+	&--title {
+		color: $secondary-color;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+	
 	@media screen and (max-width: $medium-display) {
 		font-size: 1.5rem;
 	}
@@ -89,6 +95,15 @@ a {
 
 	&--border {
 		border: 5px solid white;
+	}
+
+	&--o-nas {
+		
+		@media screen and (max-width: $medium-display) {
+			height: 50vh;
+			width: 100%;
+			background: red;
+		}
 	}
 }
 
@@ -263,6 +278,19 @@ a {
 	&--banner {
 		@include flex();
 		flex-wrap: wrap;
+	}
+
+	&--center {
+		@include flex(column, center);
+		background: url(https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=967&q=80);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+
+		@media screen and (max-width: $medium-display) {
+			background-attachment: scroll;
+		}
 	}
 
 	&--background {
@@ -605,6 +633,15 @@ a[href^="tel"] {
 	&--stretch {
 		width: 100%;
 	}
+
+	&--70 {
+		width: 70%;
+		margin-top: 2rem;
+
+		@media screen and (max-width: $medium-display) {
+			width: 100%;
+		}
+	}
 }
 
 .header__content {
@@ -761,6 +798,14 @@ a[href^="tel"] {
 		width: 100%;
 		height: 50vh;
 		z-index: 3;
+	}
+
+	&--narrow {
+		max-width: 50%;
+
+		@media screen and (max-width: $medium-display) {
+			min-width: 100%;
+		}
 	}
 }
 

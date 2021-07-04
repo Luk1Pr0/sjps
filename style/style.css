@@ -32,6 +32,12 @@ a {
   }
 }
 
+.h2--title {
+  color: #6452ff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 1140px) {
   .h2 {
     font-size: 1.5rem;
@@ -70,6 +76,14 @@ a {
 
 .img--border {
   border: 5px solid white;
+}
+
+@media screen and (max-width: 1140px) {
+  .img--o-nas {
+    height: 50vh;
+    width: 100%;
+    background: red;
+  }
 }
 
 .p {
@@ -289,6 +303,33 @@ a {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.section--center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=967&q=80);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1140px) {
+  .section--center {
+    background-attachment: scroll;
+  }
 }
 
 .section--background {
@@ -751,6 +792,17 @@ a[href^="tel"] {
   width: 100%;
 }
 
+.img__container--70 {
+  width: 70%;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1140px) {
+  .img__container--70 {
+    width: 100%;
+  }
+}
+
 .header__content {
   width: 35%;
   z-index: 2;
@@ -1043,6 +1095,16 @@ a[href^="tel"] {
   width: 100%;
   height: 50vh;
   z-index: 3;
+}
+
+.container--narrow {
+  max-width: 50%;
+}
+
+@media screen and (max-width: 1140px) {
+  .container--narrow {
+    min-width: 100%;
+  }
 }
 
 .input__container {
