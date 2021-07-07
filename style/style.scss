@@ -274,20 +274,32 @@ a {
 
 	&--close-modal {
 		position: absolute;
-		top: 0;
-		right: 0;
-		margin: 1rem;
+		top: 2rem;
+		right: 2rem;
 		background: transparent;
 		border: none;
 		box-shadow: none;
+		padding: 0;
+		font-size: 1.5rem;
+		width: 2rem;
+		height: 2rem;
+		border-radius: 0;
+		color: $primary-color;
+		border: 1px solid $primary-color;
 
 		&::before {
 			display: none;
 		}
 
 		&:hover {
-			background: transparent;
+			background: $primary-color;
+			color: white;
 			transform: scale(1.2);
+		}
+
+		@media screen and (max-width: $medium-display) {
+			top: 1rem;
+			right: 1rem;
 		}
 	}
 }
@@ -911,7 +923,7 @@ a[href^="tel"] {
 }
 
 .modal {
-	width: 50vw;
+	width: auto;
 	height: 90vh;
 	object-fit: contain;
 

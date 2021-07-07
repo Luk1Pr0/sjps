@@ -12,15 +12,27 @@ const btnCloseModal = document.getElementById('btn-close-modal');
 const showModal = (e) => {
 	const targetLink = e.target.src;
 	const targetAlt = e.target.alt;
+
+	// Show modal and display correct image
 	modalContainer.classList.remove('hidden');
-	console.log(modal);
 	modal.src = targetLink;
 	modal.alt = targetAlt;
 
+	// If the users clicks outside of the image when modal is open, the modal will close
+	window.addEventListener('click', clickedOutsideModal);
+}
+
+// Check if user clicked outside of modal
+const clickedOutsideModal = (e) => {
+	if (e.target.src === undefined) {
+		modalContainer.classList.add('hidden');
+	}
 }
 
 const closeModal = () => {
 	modalContainer.classList.add('hidden');
+	window.removeEventListener('click', clickedOutsideModal);
+	btnCloseModal.removeEventListener('click', closeModal);
 }
 
 // Toggle navigation function
