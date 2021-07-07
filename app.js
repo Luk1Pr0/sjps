@@ -66,7 +66,7 @@ const handleSubmit = async (e) => {
 			'Accept': 'application/json'
 		}
 	}).then(response => {
-		status.textContent = "Dziękujemy i do usłyszenia!";
+		status.textContent = "Dziękujemy, do usłyszenia!";
 		status.style.marginBottom = '1rem';
 		subForm.reset();
 	}).catch(error => {
