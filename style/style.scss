@@ -148,6 +148,11 @@ a {
 	}
 }
 
+.inline-block {
+	display: inline-block;
+	width: 100%;
+}
+
 .btn {
 	background: $secondary-color;
 	padding: 1.5rem 2rem;
@@ -762,6 +767,17 @@ a[href^="tel"] {
 
 		@media screen and (max-width: $medium-display) {
 			margin: 3rem 0;
+		}
+	}
+
+	&--text {
+		min-height: 40vh;
+		@include flex(column, space-around);
+		padding: 0 3rem;
+		margin: 2rem 0;
+
+		@media screen and (max-width: $medium-display) {
+			padding: 0;
 		}
 	}
 
