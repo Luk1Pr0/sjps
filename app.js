@@ -44,6 +44,8 @@ const toggleNav = () => {
 // Check page name on load and based in it add event listeners
 const checkPageName = () => {
 	const pageName = window.location.pathname.toLowerCase();
+	console.log(pageName);
+
 	switch (pageName) {
 		case '/kalendarz.html':
 			modalFiles.forEach(file => file.addEventListener('click', showModal));
