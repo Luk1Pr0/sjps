@@ -271,6 +271,25 @@ a {
 		opacity: 1;
 		pointer-events: none;
 	}
+
+	&--close-modal {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 1rem;
+		background: transparent;
+		border: none;
+		box-shadow: none;
+
+		&::before {
+			display: none;
+		}
+
+		&:hover {
+			background: transparent;
+			transform: scale(1.2);
+		}
+	}
 }
 
 .line {
@@ -877,4 +896,38 @@ a[href^="tel"] {
 .disabled {
 	opacity: 0.7;
 	cursor: not-allowed;
+}
+
+// Modal container and modal styling
+.modal__container {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	@include flex(column, center, center)
+}
+
+.modal {
+	width: 50vw;
+	height: 90vh;
+	object-fit: contain;
+
+	@media screen and (max-width: $medium-display) {
+		width: 95%;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+// in-modal class
+.in-modal {
+	cursor: pointer;
+}
+
+// Class to hide elements
+.hidden {
+	display: none;
 }

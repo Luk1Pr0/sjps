@@ -63,20 +63,31 @@
 			<li class='nav nav--li'><a href="kontakt.html" class='a a--link'>Kontakt</a></li>
 		</ul>
 	</nav>
+	
+	<!-- Modal for bigger image -->
+	<div class="modal__container hidden" id='modal__container'>
+
+		<!-- Close modal btn -->
+		<button class="btn btn--close-modal" id='btn-close-modal' title='Close'>X</button>
+
+		<img src="" alt="" class="modal" id='modal'>
+	</div>
 
 	<!-- Main content -->
 	<main class='main'>
 
-        <section class="section">
+        <section class="section section--center">
+
+			<h2 class="h2 h2--title">Kalendarz na rok 2021/22</h2>
 
             <div class="container container--space-evenly">
 
                 <div class="img__container">
-                    <img src="./assets/kalendarz1.webp" alt="Szkolny kalendarz" class="img">
+                    <img src="./assets/kalendarz1.webp" alt="Szkolny kalendarz" class="img in-modal">
                 </div>
 
                 <div class="img__container">
-                    <img src="./assets/kalendarz2.webp" alt="Szkolny kalendarz" class="img">
+                    <img src="./assets/kalendarz2.webp" alt="Szkolny kalendarz" class="img in-modal">
                 </div>
 
             </div>
