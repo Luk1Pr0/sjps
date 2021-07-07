@@ -29,7 +29,7 @@ a {
 
 @media screen and (max-width: 1140px) {
   .h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -734,6 +734,41 @@ a[href^="tel"] {
   }
 }
 
+.nav--li__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1140px) {
+  .nav--li__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+
 .header {
   padding: 0 12%;
   width: 100%;
@@ -780,7 +815,7 @@ a[href^="tel"] {
 
 @media screen and (max-width: 1140px) {
   .img__container--slogan {
-    width: 3rem;
+    width: 50vw;
   }
 }
 
