@@ -100,7 +100,7 @@ a {
 }
 
 .p--primary {
-  color: #fd5050;
+  color: #c53939;
 }
 
 .p--secondary {
@@ -166,7 +166,7 @@ a {
 .btn:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
-  background: #fd5050;
+  background: #c53939;
 }
 
 .btn:hover::before {
@@ -228,8 +228,8 @@ a {
 }
 
 .btn--important {
-  background: #fd5050;
-  border: 2px solid #fd5050;
+  background: #c53939;
+  border: 2px solid #c53939;
   padding: 0.6rem;
   border-radius: 10px;
 }
@@ -285,8 +285,8 @@ a {
   width: 2rem;
   height: 2rem;
   border-radius: 0;
-  color: #fd5050;
-  border: 1px solid #fd5050;
+  color: #c53939;
+  border: 1px solid #c53939;
 }
 
 .btn--close-modal::before {
@@ -294,7 +294,7 @@ a {
 }
 
 .btn--close-modal:hover {
-  background: #fd5050;
+  background: #c53939;
   color: white;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -422,8 +422,8 @@ a {
 }
 
 .hr {
-  background: #fd5050;
-  border: 1px solid #fd5050;
+  background: #c53939;
+  border: 1px solid #c53939;
   outline: none;
   margin: 1rem 0;
   width: 100%;
@@ -434,12 +434,12 @@ a {
 }
 
 .h3--address {
-  color: #fd5050;
+  color: #c53939;
 }
 
 .a {
   font-size: 1.2rem;
-  color: #fd5050;
+  color: #c53939;
   position: relative;
   display: inline-block;
 }
@@ -504,7 +504,7 @@ a {
   padding: 1rem;
   cursor: pointer;
   font-weight: 500;
-  color: #fd5050;
+  color: #c53939;
   position: relative;
   margin: 1px;
 }
@@ -922,7 +922,7 @@ a[href^="tel"] {
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
@@ -1168,7 +1168,7 @@ a[href^="tel"] {
 }
 
 .container--narrow {
-  max-width: 50%;
+  max-width: 70%;
 }
 
 @media screen and (max-width: 1140px) {

@@ -24,7 +24,9 @@
 		content="https://static.wixstatic.com/media/970db9_6de97b650c8e4c3c90e6e0999f0622cf~mv2.png/v1/fill/w_500,h_500,al_c/970db9_6de97b650c8e4c3c90e6e0999f0622cf~mv2.png">
 	<link rel="canonical" href="https://www.szkolajezykapolskiegoslough.org/" />
 	<link rel="stylesheet" href="./style/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -125,7 +127,8 @@
 							<img src="./assets/logo.webp" alt="School Logo - St. Faustyna" class="img img--overlay">
 						</div>
 						<div class="btn__container btn__container--small">
-							<button class="btn btn--more"><a class='a a--default' href='patron.html'>Czytaj więcej</a></button>
+							<button class="btn btn--more"><a class='a a--default' href='patron.html'>Czytaj
+									więcej</a></button>
 						</div>
 					</div>
 				</div>
@@ -177,7 +180,8 @@
 				</div>
 
 				<div class="btn__container btn__container--no-margin">
-					<button class="btn btn--more btn--disabled" title='Galeria (Chwilowo Niedostepna)' disabled>Obejrzyj zdjęcia</button>
+					<button class="btn btn--more btn--disabled" title='Galeria (Chwilowo Niedostepna)' disabled>Obejrzyj
+						zdjęcia</button>
 				</div>
 
 			</div>
@@ -196,14 +200,14 @@
 				<p class="p">
 					<span class='p p--secondary p--subtitle'>Zajęcia lekcyjne</span>
 					<br>
-					Sobota 8:30 - 16: 00
+					Sobota 8:50 - 16:00
 					<br>
 					<br>
 					<span class='p p--secondary p--subtitle'>Dyżury sekretariatu</span>
 					<br>
 					Poniedziałek 17:30 - 19:00
 					<br>
-					Piątek 17:30-19: 00
+					Piątek 17:30 - 19:00
 				</p>
 
 			</div>
@@ -267,12 +271,12 @@
 
 		<div class="footer__wrapper">
 			<div class="container container--left">
-				<p class="p p--secondary">
+				<!-- <p class="p p--secondary">
 					Akceptujemy płatności kartami debetowymi oraz przelewem na konto szkoły
 				</p>
 				<div class="btn__container btn__container--margin-bottom-0">
 					<button class="btn btn--important">Zapłać za szkołe</button>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="container container--center">
@@ -286,12 +290,14 @@
 				<p class="p p--secondary">Bądź na bieżąco!</p>
 
 				<!-- Form container -->
-				<form class="form">
-					<div class="input__container"> 
-						<input type="email" class="input" minlength="3" placeholder='Podaj swoj adres email' required>
+				<form class="form" id='sub__form' action="https://formspree.io/f/xdoydrpd" method="POST">
+					<div class="input__container">
+						<input type="email" name='email' class="input" minlength="3"
+							placeholder='Podaj swoj adres email' required>
 					</div>
+					<p class='form__status'></p>
 					<div class="btn__container btn__container--submit">
-						<button class="btn--submit">Gotowe</button>
+						<button type='submit' class="btn--submit">Gotowe</button>
 					</div>
 				</form>
 
@@ -302,8 +308,9 @@
 
 		<div class="container container--copyright">
 			<p class="p p--secondary p--copyright">© 2021 by Szkoła Języka Polskiego Slough</p>
-			<p class="p p--secondary p--copyright">Strona stworzona przez 
-				<a href='https://www.thepixelweb.co.uk' class='a a--social' target='_blank' title='The Pixel Web'>Pixel Web</a>
+			<p class="p p--secondary p--copyright">Strona stworzona przez
+				<a href='https://www.thepixelweb.co.uk' class='a a--social' target='_blank' title='The Pixel Web'>Pixel
+					Web</a>
 			</p>
 		</div>
 

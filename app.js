@@ -8,6 +8,8 @@ const modal = document.getElementById('modal');
 const modalFiles = document.querySelectorAll('.in-modal');
 const btnCloseModal = document.getElementById('btn-close-modal');
 
+const subForm = document.getElementById("sub__form");
+
 // Show modal on a file click
 const showModal = (e) => {
 	const targetLink = e.target.src;
@@ -47,12 +49,33 @@ const checkPageName = () => {
 		case '/kalendarz.html':
 			modalFiles.forEach(file => file.addEventListener('click', showModal));
 			break;
-		default: 
+		default:
 			return;
 	}
+}
+
+// Handle formspree form for subscription
+const handleSubmit = async (e) => {
+	e.preventDefault();
+	const status = document.querySelector(".form__status");
+	const data = new FormData(e.target);
+	fetch(e.target.action, {
+		method: subForm.method,
+		body: data,
+		headers: {
+			'Accept': 'application/json'
+		}
+	}).then(response => {
+		status.textContent = "Dziękujemy i do usłyszenia!";
+		status.style.marginBottom = '1rem';
+		subForm.reset();
+	}).catch(error => {
+		status.textContent = "Wystąpił błąd. Spróbuj ponownie.";
+	});
 }
 
 // Event listeners
 burgerBtn.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
 window.addEventListener('load', checkPageName);
+subForm.addEventListener("submit", handleSubmit);
