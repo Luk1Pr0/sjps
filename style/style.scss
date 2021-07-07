@@ -902,6 +902,11 @@ a[href^="tel"] {
 .pdf {
 	width: 60%;
 	min-height: 80vh;
+
+	@media screen and (max-width: $medium-display) {
+		width: 100%;
+		min-height: 80vh;
+	}
 }
 
 // Disabled class

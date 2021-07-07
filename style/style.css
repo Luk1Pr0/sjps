@@ -1213,6 +1213,13 @@ a[href^="tel"] {
   min-height: 80vh;
 }
 
+@media screen and (max-width: 1140px) {
+  .pdf {
+    width: 100%;
+    min-height: 80vh;
+  }
+}
+
 .disabled {
   opacity: 0.7;
   cursor: not-allowed;
