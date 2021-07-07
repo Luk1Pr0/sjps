@@ -24,6 +24,7 @@
 		content="https://static.wixstatic.com/media/970db9_6de97b650c8e4c3c90e6e0999f0622cf~mv2.png/v1/fill/w_500,h_500,al_c/970db9_6de97b650c8e4c3c90e6e0999f0622cf~mv2.png">
 	<link rel="canonical" href="https://www.szkolajezykapolskiegoslough.org/" />
 	<link rel="stylesheet" href="./style/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -153,12 +154,14 @@
 				</div>
 
 				<div class="btn__container btn__container--no-margin">
-					<button class="btn btn--more">Zapisz dziecko</button>
+					<a href="zapisy.html" class="a--default" title='Zapisz dziecko'>
+						<button class="btn btn--more">Zapisz dziecko</button>
+					</a>
 				</div>
 
 			</div>
 
-			<div class="banner banner--2">
+			<div class="banner banner--2 disabled" title='Galeria chwilowo nieobecna'>
 
 				<div class="container container--space-evenly">
 
@@ -172,7 +175,7 @@
 				</div>
 
 				<div class="btn__container btn__container--no-margin">
-					<button class="btn btn--more">Obejrzyj zdjęcia</button>
+					<button class="btn btn--more btn--disabled" title='Galeria (Chwilowo Niedostepna)' disabled>Obejrzyj zdjęcia</button>
 				</div>
 
 			</div>
@@ -232,10 +235,18 @@
 						<br>
 						Slough Berkshire
 					</p>
-					<p class="p p--white"><a class='a a--default'
-							href='mailto:info@szkolajezykapolskiegoslough.org?subject=Polska Szkola'>info@szkolajezykapolskiegoslough.org</a>
-					</p>
-					<p class="p p--white"><a class='a a--default' href='tel:07723646812'>07723 646 812</a></p>
+					<a class='a a--default' href='mailto:info@szkolajezykapolskiegoslough.org?subject=Polska Szkola'>
+						<p class="p p--white">
+							<i class="fas fa-at"></i>
+							info@szkolajezykapolskiegoslough.org
+						</p>
+					</a>
+					<a class='a a--default' href='tel:07723646812'>
+						<p class="p p--white">
+							<i class="fas fa-phone-alt"></i>
+							07723 646 812
+						</p>
+					</a>
 				</div>
 
 				<div class="container container--map">
@@ -289,9 +300,8 @@
 
 		<div class="container container--copyright">
 			<p class="p p--secondary p--copyright">© 2021 by Szkoła Języka Polskiego Slough</p>
-			<p class="p p--secondary p--copyright">Strona stworzona przez <a href='https://www.thepixelweb.co.uk'
-					class='a a--social' target='_blank' title='The Pixel Web'>Pixel
-					Web</a>
+			<p class="p p--secondary p--copyright">Strona stworzona przez 
+				<a href='https://www.thepixelweb.co.uk' class='a a--social' target='_blank' title='The Pixel Web'>Pixel Web</a>
 			</p>
 		</div>
 
