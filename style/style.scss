@@ -351,6 +351,10 @@ a {
 		}
 	}
 
+	&--no-background {
+		background: transparent;
+	}
+
 	@media screen and (max-width: $medium-display) {
 		@include flex(column);
 		padding: $padding-horizontal;

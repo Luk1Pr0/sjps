@@ -396,6 +396,10 @@ a {
   }
 }
 
+.section--no-background {
+  background: transparent;
+}
+
 @media screen and (max-width: 1140px) {
   .section {
     display: -webkit-box;
