@@ -24,6 +24,7 @@ a {
 
 .h1 {
   line-height: 130%;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1140px) {
@@ -57,17 +58,11 @@ a {
 
 .img--section {
   width: 100%;
-  height: 30vh;
+  min-height: 40vh;
 }
 
 .img--margin {
   margin: 0 1rem;
-}
-
-.img--overlay {
-  width: 100%;
-  height: 100%;
-  background: white;
 }
 
 .img--rounded {
@@ -82,7 +77,6 @@ a {
   .img--o-nas {
     height: 50vh;
     width: 100%;
-    background: red;
   }
 }
 
@@ -438,7 +432,7 @@ a {
 }
 
 .a {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #c53939;
   position: relative;
   display: inline-block;
@@ -501,7 +495,7 @@ a {
   text-decoration: none;
   list-style: none;
   font-size: 1.1rem;
-  padding: 1rem;
+  padding: 0.8rem;
   cursor: pointer;
   font-weight: 500;
   color: #c53939;
@@ -779,9 +773,14 @@ a[href^="tel"] {
   }
 }
 
+.img__container--slogan {
+  width: 10rem;
+  margin: 0 1rem;
+}
+
 @media screen and (max-width: 1140px) {
   .img__container--slogan {
-    width: 7rem;
+    width: 3rem;
   }
 }
 
@@ -828,7 +827,7 @@ a[href^="tel"] {
 }
 
 .img__container--overlay {
-  width: 30%;
+  width: 40%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;

@@ -132,12 +132,14 @@
 				<p class="p p--secondary">Bądź na bieżąco!</p>
 
 				<!-- Form container -->
-				<form class="form">
+				<form class="form" id='sub__form' action="https://formspree.io/f/xdoydrpd" method="POST">
 					<div class="input__container">
-						<input type="email" class="input" minlength="3" placeholder='Podaj swoj adres email' required>
+						<input type="email" name='email' class="input" minlength="3"
+							placeholder='Podaj swoj adres email' required>
 					</div>
+					<p class='form__status'></p>
 					<div class="btn__container btn__container--submit">
-						<button class="btn--submit">Gotowe</button>
+						<button type='submit' class="btn--submit">Gotowe</button>
 					</div>
 				</form>
 
