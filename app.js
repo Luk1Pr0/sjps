@@ -40,10 +40,17 @@ const toggleNav = () => {
 	navMenu.classList.toggle('nav--hidden');
 }
 
+// Check page name on load and based in it add event listeners
+const checkPageName = () => {
+	const pageName = window.location.pathname.toLowerCase();
+	switch (pageName) {
+		case '/kalendarz.html':
+			modalFiles.forEach(file => file.addEventListener('click', showModal));
+			break;
+	}
+}
+
 // Event listeners
 burgerBtn.addEventListener('click', toggleNav);
-btnCloseModal.addEventListener('click', closeModal);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
-modalFiles.forEach(file => file.addEventListener('click', showModal));
-
-
+window.addEventListener('load', checkPageName);
