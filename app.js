@@ -10,6 +10,7 @@ const btnCloseModal = document.getElementById('btn-close-modal');
 
 // Show modal on a file click
 const showModal = (e) => {
+	console.log('show modal');
 	const targetLink = e.target.src;
 	const targetAlt = e.target.alt;
 
@@ -47,6 +48,8 @@ const checkPageName = () => {
 		case '/kalendarz.html':
 			modalFiles.forEach(file => file.addEventListener('click', showModal));
 			break;
+		default: 
+			return;
 	}
 }
 
