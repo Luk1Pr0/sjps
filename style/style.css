@@ -359,11 +359,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=967&q=80);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1140px) {
@@ -604,6 +599,12 @@ a[href^="tel"] {
   font-size: 0.9rem;
   color: #6452ff;
   text-align: left;
+}
+
+.ul {
+  text-align: left;
+  font-size: 1.2rem;
+  padding-left: 1rem;
 }
 
 .slogan {
@@ -1308,5 +1309,9 @@ a[href^="tel"] {
 
 .hidden {
   display: none;
+}
+
+.text--underline {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
