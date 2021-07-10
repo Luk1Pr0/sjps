@@ -15,38 +15,39 @@ const documents = document.querySelectorAll('.pdf__container');
 
 // Filter menu documents
 const filterMenu = (e) => {
-	const selected = e.target.className;
+	const selected = e.target.classList[1];
+	console.log(selected);
 
-	console.log('working');
-	if (selected.includes('menu--1')) {
-		documents.forEach(doc => {
-			doc.classList.remove('hidden');
-			if (!doc.className.includes('register')) {
-				doc.classList.add('hidden');
-			}
-		});
-	} else if (selected.includes('menu--2')) {
+	switch (selected) {
+		case 'menu--1':
+			documents.forEach(doc => {
+				doc.classList.remove('hidden');
+				if (!doc.className.includes('register')) {
+					doc.classList.add('hidden');
+				}
+			});
+		break;
+		case 'menu--2':
 		documents.forEach(doc => {
 			doc.classList.remove('hidden');
 			if (!doc.className.includes('regulation')) {
 				doc.classList.add('hidden');
 			}
 		});
-	} else if (selected.includes('menu--3')) {
+		break;
+		case 'menu--3':
 		documents.forEach(doc => {
 			doc.classList.remove('hidden');
 			if (!doc.className.includes('work')) {
 				doc.classList.add('hidden');
 			}
 		});
-	} else {
-		documents.forEach(doc => {
-			doc.classList.remove('hidden');
-		});
+		break;
+		default:
+			documents.forEach(doc => doc.classList.remove('hidden'));
+			break;
 	}
-
 }
-
 
 // Show modal on a file click
 const showModal = (e) => {
