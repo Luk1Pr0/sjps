@@ -10,6 +10,10 @@ const btnCloseModal = document.getElementById('btn-close-modal');
 
 const subForm = document.getElementById("sub__form");
 
+const menuBtns = document.querySelectorAll('.menu');
+
+console.log(menuBtns);
+
 // Show modal on a file click
 const showModal = (e) => {
 	const targetLink = e.target.src;
@@ -42,12 +46,20 @@ const toggleNav = () => {
 	navMenu.classList.toggle('nav--hidden');
 }
 
+// Filter menu documents
+const filterMenu = () => {
+	console.log('true');
+}
+
 // Check page name on load and based in it add event listeners
 const checkPageName = () => {
 	const pageName = window.location.pathname.toLowerCase();
 	switch (pageName) {
 		case '/kalendarz.html':
 			modalFiles.forEach(file => file.addEventListener('click', showModal));
+			break;
+		case '/dokumenty.html':
+			menuBtns.forEach(btn => btn.addEventListener('click', filterMenu));
 			break;
 		default:
 			return;
