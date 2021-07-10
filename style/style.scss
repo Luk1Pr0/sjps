@@ -306,7 +306,7 @@ a {
 }
 
 .section {
-	min-height: 40vh;
+	min-height: 60vh;
 	padding: 2rem $padding-horizontal;
 	@include flex(row, space-between);
 	position: relative;
@@ -794,7 +794,7 @@ a[href^="tel"] {
 	width: 100%;
 	min-height: 20vh;
 	padding: 2rem $padding-horizontal;
-	background: rgba(179, 179, 179, 0.164);
+	background: rgba(179, 179, 179, 0.7);
 }
 
 .footer__wrapper {
