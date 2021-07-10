@@ -875,7 +875,7 @@ a[href^="tel"] {
 	}
 
 	&--documents {
-		@include flex(row, space-between);
+		@include flex(row, center);
 		margin: 2rem 0;
 
 		@media screen and (max-width: $medium-display) {
@@ -1012,7 +1012,7 @@ a[href^="tel"] {
 	display: block;
 
 	@media screen and (max-width: $medium-display) {
-		min-width: 10rem;
+		min-width: 9rem;
 	}
 
 	&::after {
