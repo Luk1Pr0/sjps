@@ -11,8 +11,43 @@ const btnCloseModal = document.getElementById('btn-close-modal');
 const subForm = document.getElementById("sub__form");
 
 const menuBtns = document.querySelectorAll('.menu');
+const documents = document.querySelectorAll('.pdf__container');
 
-console.log(menuBtns);
+// Filter menu documents
+const filterMenu = (e) => {
+	const selected = e.target.classList[1];
+	console.log(selected);
+
+	switch (selected) {
+		case 'menu--1':
+			documents.forEach(doc => {
+				doc.classList.remove('hidden');
+				if (!doc.className.includes('register')) {
+					doc.classList.add('hidden');
+				}
+			});
+		break;
+		case 'menu--2':
+		documents.forEach(doc => {
+			doc.classList.remove('hidden');
+			if (!doc.className.includes('regulation')) {
+				doc.classList.add('hidden');
+			}
+		});
+		break;
+		case 'menu--3':
+		documents.forEach(doc => {
+			doc.classList.remove('hidden');
+			if (!doc.className.includes('work')) {
+				doc.classList.add('hidden');
+			}
+		});
+		break;
+		default:
+			documents.forEach(doc => doc.classList.remove('hidden'));
+			break;
+	}
+}
 
 // Show modal on a file click
 const showModal = (e) => {
@@ -44,11 +79,6 @@ const closeModal = () => {
 // Toggle navigation function
 const toggleNav = () => {
 	navMenu.classList.toggle('nav--hidden');
-}
-
-// Filter menu documents
-const filterMenu = () => {
-	console.log('true');
 }
 
 // Check page name on load and based in it add event listeners
