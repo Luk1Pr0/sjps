@@ -17,6 +17,7 @@ const documents = document.querySelectorAll('.pdf__container');
 const filterMenu = (e) => {
 	const selected = e.target.className;
 
+	console.log('working');
 	if (selected.includes('menu--1')) {
 		documents.forEach(doc => {
 			doc.classList.remove('hidden');

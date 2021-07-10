@@ -929,7 +929,8 @@ a[href^="tel"] {
 		width: auto;
 		min-height: 50vh;
 		flex-grow: 1;
-
+		margin: 0 2rem;
+		
 		@media screen and (max-width: $medium-display) {
 			margin-bottom: 3rem;
 		}
