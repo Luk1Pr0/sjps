@@ -45,6 +45,17 @@ a {
 	text-decoration: none;
 }
 
+// Details
+.details {
+	@include flex(column, flex-start, flex-end);
+	margin: 1rem 0;
+}
+
+// Summary
+.summary {
+	cursor: pointer;
+}
+
 .h1 {
 	line-height: 130%;
 	font-size: 1.5rem;
@@ -370,6 +381,11 @@ a {
 	&--address {
 		color: $primary-color;
 	}
+}
+
+.h4 {
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
 }
 
 .a {
@@ -876,11 +892,11 @@ a[href^="tel"] {
 	}
 
 	&--documents {
-		@include flex(row, center);
+		@include flex(column, flex-start, center);
 		margin: 2rem 0;
 
 		@media screen and (max-width: $medium-display) {
-			@include flex(column);
+			@include flex(column, flex-start, flex-start);
 		}
 	}
 }
