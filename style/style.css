@@ -1069,7 +1069,7 @@ a[href^="tel"] {
   width: 100%;
   min-height: 20vh;
   padding: 2rem 12%;
-  background: rgba(179, 179, 179, 0.7);
+  background: rgba(179, 179, 179, 0.1);
 }
 
 .footer__wrapper {
