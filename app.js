@@ -16,7 +16,11 @@ const documents = document.querySelectorAll('.pdf__container');
 // Filter menu documents
 const filterMenu = (e) => {
 	const selected = e.target;
+
+	// When function runs remove active menu class from all menu buttons
 	menuBtns.forEach(btn => btn.classList.remove('menu--active'));
+
+	// When function is run, for each document remove hidden class from it
 	documents.forEach(doc => {
 		doc.classList.remove('hidden');
 	});
@@ -25,36 +29,19 @@ const filterMenu = (e) => {
 	switch (selected.classList[1]) {
 		case 'menu--1':
 			selected.classList.add('menu--active');
-			documents.forEach(doc => {
-				if (!doc.className.includes('register')) {
-					doc.classList.add('hidden');
-				} else {
-					doc.open = 'true';
-				}
-			});
+			documents.forEach(doc => !doc.className.includes('register') ? doc.classList.add('hidden') : doc.open = true);
 			break;
 		case 'menu--2':
 			selected.classList.add('menu--active');
-			documents.forEach(doc => {
-				if (!doc.className.includes('regulation')) {
-					doc.classList.add('hidden');
-				} else {
-					doc.open = 'true';
-				}
-			});
+			documents.forEach(doc => !doc.className.includes('regulation') ? doc.classList.add('hidden') : doc.open = true);
 			break;
 		case 'menu--3':
 			selected.classList.add('menu--active');
-			documents.forEach(doc => {
-				if (!doc.className.includes('work')) {
-					doc.classList.add('hidden');
-				} else {
-					doc.open = 'true';
-				}
-			});
+			documents.forEach(doc => !doc.className.includes('work') ? doc.classList.add('hidden') : doc.open = true);
 			break;
 		default:
 			selected.classList.add('menu--active');
+			documents.forEach(doc => doc.open = false);
 			break;
 	}
 }
