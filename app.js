@@ -15,36 +15,46 @@ const documents = document.querySelectorAll('.pdf__container');
 
 // Filter menu documents
 const filterMenu = (e) => {
-	const selected = e.target.classList[1];
-	console.log(selected);
+	const selected = e.target;
+	menuBtns.forEach(btn => btn.classList.remove('menu--active'));
+	documents.forEach(doc => {
+		doc.classList.remove('hidden');
+	});
 
-	switch (selected) {
+	// When menu is selected add active class to it and display relevant document
+	switch (selected.classList[1]) {
 		case 'menu--1':
+			selected.classList.add('menu--active');
 			documents.forEach(doc => {
-				doc.classList.remove('hidden');
 				if (!doc.className.includes('register')) {
 					doc.classList.add('hidden');
+				} else {
+					doc.open = 'true';
 				}
 			});
-		break;
+			break;
 		case 'menu--2':
-		documents.forEach(doc => {
-			doc.classList.remove('hidden');
-			if (!doc.className.includes('regulation')) {
-				doc.classList.add('hidden');
-			}
-		});
-		break;
+			selected.classList.add('menu--active');
+			documents.forEach(doc => {
+				if (!doc.className.includes('regulation')) {
+					doc.classList.add('hidden');
+				} else {
+					doc.open = 'true';
+				}
+			});
+			break;
 		case 'menu--3':
-		documents.forEach(doc => {
-			doc.classList.remove('hidden');
-			if (!doc.className.includes('work')) {
-				doc.classList.add('hidden');
-			}
-		});
-		break;
+			selected.classList.add('menu--active');
+			documents.forEach(doc => {
+				if (!doc.className.includes('work')) {
+					doc.classList.add('hidden');
+				} else {
+					doc.open = 'true';
+				}
+			});
+			break;
 		default:
-			documents.forEach(doc => doc.classList.remove('hidden'));
+			selected.classList.add('menu--active');
 			break;
 	}
 }

@@ -82,7 +82,7 @@
 
 				<!-- Menu filter container -->
 				<div class="menu__container">
-					<div class="menu menu--0">
+					<div class="menu menu--0 menu--active">
 						<p class='p'>Wszystkie</p>
 					</div>
 					<div class="menu menu--1">
@@ -97,27 +97,52 @@
 				</div>
 
 				<div class="container container--documents">
-					
-					<div class="pdf__container pdf__container--register">
-						<h3 class='h4'>Formularz rejestracyjny</h3>
-						<br>
-						<iframe src="./formularz_rejestracyjny.pdf" frameborder="0" class='pdf pdf--small'></iframe>
-					</div>
 
-					<div class="pdf__container pdf__container--regulation">
-						<h3 class='h4'>Regulamin Szkoly</h3>
-						<br>
-						<iframe src="./regulamin_szkoly.pdf" frameborder="0" class='pdf pdf--small'></iframe>
-					</div>
+					<details class='details pdf__container pdf__container--register'>
+						<summary class='h4 summary'>
+							Formularz rejestracyjny
+						</summary>
 
-					<div class="pdf__container pdf__container--work">
-						<h3 class='h4'>Podanie o prace</h3>
 						<br>
-						<iframe src="./podanie_o_prace.pdf" frameborder="0" class='pdf pdf--small'></iframe>
-					</div>
+
+						<a href="./formularz_rejestracyjny.pdf" class="a" target='_blank'
+							title='Formularz Rejestracyjny PDF (Otwiera się w nowej karcie)'>
+							Formularz
+							rejestracyjny
+							(Otwiera w nowej karcie)
+						</a>
+					</details>
+
+					<details class='details pdf__container pdf__container--regulation'>
+						<summary class='h4 summary'>
+							Regulamin szkoły
+						</summary>
+
+						<br>
+
+						<a href="regulamin_szkoly.pdf" class="a" target='_blank'
+							title='Regulamin szkoły (Otwiera się w nowej karcie)'>
+							Regulamin Szkoły
+							(Otwiera w nowej karcie)
+						</a>
+					</details>
+
+					<details class='details pdf__container pdf__container--work'>
+						<summary class='h4 summary'>
+							Podanie o prace
+						</summary>
+
+						<br>
+
+						<a href="/podanie_o_prace.pdf" class="a" target='_blank'
+							title='Podanie o prace (Otwiera się w nowej karcie)'>
+							Podanie o prace
+							(Otwiera w nowej karcie)
+						</a>
+					</details>
 
 				</div>
-				
+
 			</div>
 
 		</section>
