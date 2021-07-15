@@ -2,6 +2,7 @@
 const burgerBtn = document.getElementById('btn__burger');
 const navMenu = document.getElementById('navigation__menu');
 const navLinks = document.querySelectorAll('.nav--li');
+const navigation = document.querySelector('.navigation');
 
 const modalContainer = document.getElementById('modal__container');
 const modal = document.getElementById('modal');
@@ -117,8 +118,27 @@ const checkPageName = () => {
 	}
 }
 
+
+let lastScroll = 0;
+
+const showNav = () => {
+	let currentScroll = window.pageYOffset;
+	const navigationHeight = navigation.getBoundingClientRect().height;
+
+	if (currentScroll - lastScroll >= 0) {
+		navigation.style.position = 'relative';
+	} else if (currentScroll > 50 && currentScroll > navigationHeight / 2) {
+		navigation.style.position = 'fixed';
+	} else {
+		navigation.style.position = 'relative';
+	}
+
+	lastScroll = currentScroll;
+}
+
 // Event listeners
 burgerBtn.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
 window.addEventListener('load', checkPageName);
+window.addEventListener('scroll', showNav);
 subForm.addEventListener("submit", handleSubmit);
