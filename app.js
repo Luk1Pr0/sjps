@@ -14,6 +14,8 @@ const subForm = document.getElementById("sub__form");
 const menuBtns = document.querySelectorAll('.menu');
 const documents = document.querySelectorAll('.pdf__container');
 
+let lastScroll = 0;
+
 // Filter menu documents
 const filterMenu = (e) => {
 	const selected = e.target;
@@ -118,21 +120,23 @@ const checkPageName = () => {
 	}
 }
 
-
-let lastScroll = 0;
-
-const showNav = () => {
+// Show navigation when user scrolls up
+const showNavOnScroll = () => {
 	let currentScroll = window.pageYOffset;
 	const navigationHeight = navigation.getBoundingClientRect().height;
 
+	// If user scrolls bottom, then do not show the nav
 	if (currentScroll - lastScroll >= 0) {
 		navigation.style.position = 'relative';
-	} else if (currentScroll > 50 && currentScroll > navigationHeight / 2) {
+	}
+	// If current scroll is bigger than 50px and if it is bigger then half of nav height than show the nav
+	else if (currentScroll > 50 && currentScroll > navigationHeight / 2) {
 		navigation.style.position = 'fixed';
 	} else {
 		navigation.style.position = 'relative';
 	}
 
+	// Set last scroll to be the last know scroll position
 	lastScroll = currentScroll;
 }
 
@@ -140,5 +144,5 @@ const showNav = () => {
 burgerBtn.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
 window.addEventListener('load', checkPageName);
-window.addEventListener('scroll', showNav);
+window.addEventListener('scroll', showNavOnScroll);
 subForm.addEventListener("submit", handleSubmit);
