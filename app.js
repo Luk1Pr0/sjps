@@ -14,7 +14,7 @@ const subForm = document.getElementById("sub__form");
 const menuBtns = document.querySelectorAll('.menu');
 const documents = document.querySelectorAll('.pdf__container');
 
-let lastScroll = 0;
+let lastScroll = window.pageYOffset;
 
 // Filter menu documents
 const filterMenu = (e) => {
@@ -42,13 +42,16 @@ const filterMenu = (e) => {
 			selected.classList.add('menu--active');
 			documents.forEach(doc => !doc.className.includes('work') ? doc.classList.add('hidden') : doc.open = true);
 			break;
+		case 'menu--4':
+			selected.classList.add('menu--active');
+			documents.forEach(doc => !doc.className.includes('legitymacja') ? doc.classList.add('hidden') : doc.open = true);
+			break;
 		default:
 			selected.classList.add('menu--active');
 			documents.forEach(doc => doc.open = false);
 			break;
 	}
 }
-
 
 // Toggle modal on a file click
 const toggleModal = (e) => {
@@ -129,8 +132,8 @@ const showNavOnScroll = () => {
 	if (currentScroll - lastScroll >= 0) {
 		navigation.style.position = 'relative';
 	}
-	// If current scroll is bigger than 50px and if it is bigger then half of nav height than show the nav
-	else if (currentScroll > 50 && currentScroll > navigationHeight / 2) {
+	// If current scroll is bigger than 0 show the nav
+	else if (currentScroll > 0) {
 		navigation.style.position = 'fixed';
 	} else {
 		navigation.style.position = 'relative';
