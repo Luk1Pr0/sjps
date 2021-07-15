@@ -1017,13 +1017,17 @@ a[href^="tel"] {
 
 // Menu container
 .menu__container {
-	width: auto;
+	width: 100%;
 	height: auto;
 	@include flex(row);
 	overflow-x: auto;
 
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
 	@media screen and (max-width: $medium-display) {
-		@include flex(row, space-between);
+		@include flex(row, flex-start);
 	}
 }
 
@@ -1032,11 +1036,12 @@ a[href^="tel"] {
 	position: relative;
 	overflow: hidden;
 	padding: 0.5rem;
-	margin: 1rem;
+	margin: 0.5rem;
+	width: auto;
 
 	@media screen and (max-width: $medium-display) {
 		padding: 1rem 0;
-		min-width: 50%;
+		min-width: 35vw;
 	}
 
 	&::after {

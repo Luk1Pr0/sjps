@@ -46,6 +46,10 @@ const filterMenu = (e) => {
 			selected.classList.add('menu--active');
 			documents.forEach(doc => !doc.className.includes('legitymacja') ? doc.classList.add('hidden') : doc.open = true);
 			break;
+		case 'menu--5':
+			selected.classList.add('menu--active');
+			documents.forEach(doc => !doc.className.includes('podstawa-programowa') ? doc.classList.add('hidden') : doc.open = true);
+			break;
 		default:
 			selected.classList.add('menu--active');
 			documents.forEach(doc => doc.open = false);

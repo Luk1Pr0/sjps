@@ -1405,7 +1405,7 @@ a[href^="tel"] {
 }
 
 .menu__container {
-  width: auto;
+  width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1423,6 +1423,10 @@ a[href^="tel"] {
   overflow-x: auto;
 }
 
+.menu__container::-webkit-scrollbar {
+  display: none;
+}
+
 @media screen and (max-width: 1140px) {
   .menu__container {
     display: -webkit-box;
@@ -1432,9 +1436,9 @@ a[href^="tel"] {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1446,13 +1450,14 @@ a[href^="tel"] {
   position: relative;
   overflow: hidden;
   padding: 0.5rem;
-  margin: 1rem;
+  margin: 0.5rem;
+  width: auto;
 }
 
 @media screen and (max-width: 1140px) {
   .menu {
     padding: 1rem 0;
-    min-width: 50%;
+    min-width: 35vw;
   }
 }
 
