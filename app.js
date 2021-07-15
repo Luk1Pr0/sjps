@@ -132,7 +132,7 @@ const showNavOnScroll = () => {
 		navigation.style.position = 'relative';
 	}
 	// If current scroll is bigger than last scroll show the nav
-	else if (currentScroll < lastScroll) {
+	else if (currentScroll < lastScroll && currentScroll > 0) {
 		navigation.style.position = 'fixed';
 	} else {
 		navigation.style.position = 'relative';
