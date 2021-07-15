@@ -570,7 +570,8 @@ a[href^="tel"] {
 	box-shadow: $box-shadow;
 	padding: 1rem $padding-horizontal;
 	position: relative;
-	z-index: 2;
+	z-index: 5;
+	background: rgb(255, 255, 255);
 
 	@media screen and (max-width: $medium-display) {
 		padding: 1rem;
