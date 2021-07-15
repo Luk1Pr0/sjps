@@ -126,14 +126,13 @@ const checkPageName = () => {
 // Show navigation when user scrolls up
 const showNavOnScroll = () => {
 	let currentScroll = window.pageYOffset;
-	const navigationHeight = navigation.getBoundingClientRect().height;
 
 	// If user scrolls bottom, then do not show the nav
 	if (currentScroll - lastScroll >= 0) {
 		navigation.style.position = 'relative';
 	}
-	// If current scroll is bigger than 0 show the nav
-	else if (currentScroll > 0) {
+	// If current scroll is bigger than last scroll show the nav
+	else if (currentScroll < lastScroll) {
 		navigation.style.position = 'fixed';
 	} else {
 		navigation.style.position = 'relative';
