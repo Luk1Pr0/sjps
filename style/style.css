@@ -44,6 +44,12 @@ a {
   border-radius: 10px;
 }
 
+@media screen and (max-width: 1140px) {
+  .details {
+    width: 100%;
+  }
+}
+
 .summary {
   cursor: pointer;
 }
@@ -1399,7 +1405,7 @@ a[href^="tel"] {
 }
 
 .menu__container {
-  width: 100%;
+  width: auto;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1436,19 +1442,17 @@ a[href^="tel"] {
 }
 
 .menu {
-  border: 1px solid #6452ff;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  margin: 0 1rem;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  display: block;
+  padding: 0.5rem;
+  margin: 1rem;
 }
 
 @media screen and (max-width: 1140px) {
   .menu {
-    min-width: 9rem;
+    padding: 1rem 0;
+    min-width: 50%;
   }
 }
 

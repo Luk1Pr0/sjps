@@ -54,6 +54,10 @@ a {
 	padding: 1rem;
 	width: 50%;
 	border-radius: 10px;
+
+	@media screen and (max-width: $medium-display) {
+		width: 100%;
+	}
 }
 
 // Summary
@@ -1013,7 +1017,7 @@ a[href^="tel"] {
 
 // Menu container
 .menu__container {
-	width: 100%;
+	width: auto;
 	height: auto;
 	@include flex(row);
 	overflow-x: auto;
@@ -1024,17 +1028,15 @@ a[href^="tel"] {
 }
 
 .menu {
-	border: 1px solid $secondary-color;
-	border-radius: 20px;
-	padding: 0.5rem 1rem;
-	margin: 0 1rem;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	display: block;
+	padding: 0.5rem;
+	margin: 1rem;
 
 	@media screen and (max-width: $medium-display) {
-		min-width: 9rem;
+		padding: 1rem 0;
+		min-width: 50%;
 	}
 
 	&::after {
