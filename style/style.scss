@@ -145,6 +145,10 @@ a {
 		color: white;
 	}
 
+	&--black {
+		color: black;
+	}
+
 	&--left {
 		text-align: left;
 	}
@@ -644,7 +648,12 @@ a[href^="tel"] {
 	padding: 0 $padding-horizontal;
 	width: 100%;
 	min-height: 70vh;
-	background: rgb(71, 211, 164);
+	// background: rgb(71, 211, 164);
+	background: url('/assets/child_with_book.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	@include flex(row, space-between, center);
 
 	@media screen and (max-width: $medium-display) {
@@ -837,6 +846,8 @@ a[href^="tel"] {
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
+	position: relative;
+	z-index: 1;
 
 	&--center {
 		margin: 0 1rem;
@@ -1098,6 +1109,29 @@ a[href^="tel"] {
 
 		p {
 			color: white;
+		}
+	}
+}
+
+// Page styling
+.page {
+	&--documents {
+		background: url('/assets/pencil_background.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		min-height: 80vh;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(255, 255, 255, 0.4);
+			width: 100%;
+			height: 100%;
+			z-index: 0;
 		}
 	}
 }
