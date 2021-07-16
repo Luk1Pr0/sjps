@@ -1290,6 +1290,11 @@ a[href^="tel"] {
   }
 }
 
+.container--prezi {
+  width: 80%;
+  height: 80vh;
+}
+
 .input__container {
   width: auto;
   height: auto;

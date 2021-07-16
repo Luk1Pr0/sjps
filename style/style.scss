@@ -908,6 +908,11 @@ a[href^="tel"] {
 			@include flex(column, flex-start, flex-start);
 		}
 	}
+	
+	&--prezi {
+		width: 80%;
+		height: 80vh;
+	}
 }
 
 // Input container style
