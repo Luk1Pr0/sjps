@@ -648,13 +648,12 @@ a[href^="tel"] {
 	padding: 0 $padding-horizontal;
 	width: 100%;
 	min-height: 70vh;
-	// background: rgb(71, 211, 164);
 	background: url('/assets/child_with_book.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	@include flex(row, space-between, center);
+	@include flex(row, flex-end, center);
 
 	@media screen and (max-width: $medium-display) {
 		padding: $padding-horizontal 0;
@@ -736,8 +735,8 @@ a[href^="tel"] {
 	width: 35%;
 	z-index: 2;
 	background: rgba(0, 0, 0, 0.8);
-	padding: 1rem;
-	border-radius: 20%;
+	padding: 1rem 2rem;
+	border-radius: 10%;
 
 	h2 {
 		font-size: 3rem;

@@ -132,20 +132,17 @@ const showNavOnScroll = () => {
 	let currentScroll = window.pageYOffset;
 
 	// If user scrolls bottom, then do not show the nav
-	if (currentScroll - lastScroll >= 0) {
+	if (currentScroll > lastScroll) {
 		navigation.style.position = 'relative';
 	}
 	// If current scroll is bigger than last scroll show the nav
 	else if (currentScroll < lastScroll && currentScroll > 0) {
-		navigation.style.position = 'fixed';
+			navigation.style.position = 'fixed';
 	} else {
 		navigation.style.position = 'relative';
 	}
-	// Everytime the function runs, set the lastScroll to current scroll with 2 seconds delay
-	setTimeout(() => {
-		lastScroll = currentScroll;
-
-	}, 2000);
+	
+	lastScroll = currentScroll;
 }
 
 // Event listeners
