@@ -141,9 +141,11 @@ const showNavOnScroll = () => {
 	} else {
 		navigation.style.position = 'relative';
 	}
+	// Everytime the function runs, set the lastScroll to current scroll with 2 seconds delay
+	setTimeout(() => {
+		lastScroll = currentScroll;
 
-	// Set last scroll to be the last know scroll position
-	lastScroll = currentScroll;
+	}, 2000);
 }
 
 // Event listeners
