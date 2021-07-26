@@ -348,6 +348,15 @@ a {
 		}
 	}
 
+	&--spacebetween {
+		@include flex(row, space-between);
+
+		@media screen and (max-width: $medium-display) {
+			background-attachment: scroll;
+			@include flex(column, space-around);
+		}
+	}
+
 	&--background {
 		background: url(https://parafiaslough.org/wp-content/uploads/2018/12/PA270886-1.jpg);
 		background-repeat: no-repeat;
@@ -892,6 +901,15 @@ a[href^="tel"] {
 		}
 	}
 
+	&--space-between {
+		@include flex(row, space-between);
+		flex-grow: 0;
+
+		@media screen and (max-width: $medium-display) {
+			@include flex(column);
+		}
+	}
+
 	&--description {
 		margin: 2rem 0;
 	}
@@ -974,6 +992,17 @@ a[href^="tel"] {
 		margin: 0 2rem;
 
 		@media screen and (max-width: $medium-display) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	&--medium {
+		width: 30vw;
+		flex-grow: 1;
+		margin: 0 2rem;
+
+		@media screen and (max-width: $medium-display) {
+			margin: 0;
 			margin-bottom: 3rem;
 		}
 	}
