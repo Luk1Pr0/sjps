@@ -1446,6 +1446,11 @@ a[href^="tel"] {
   }
 }
 
+.pdf--large {
+  width: 100%;
+  min-height: 100vh;
+}
+
 @media screen and (max-width: 1140px) {
   .pdf {
     width: 100%;

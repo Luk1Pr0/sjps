@@ -1007,6 +1007,11 @@ a[href^="tel"] {
 		}
 	}
 
+	&--large {
+		width: 100%;
+		min-height: 100vh;
+	}
+
 	@media screen and (max-width: $medium-display) {
 		width: 100%;
 		min-height: 80vh;
