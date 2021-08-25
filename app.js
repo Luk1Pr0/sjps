@@ -123,6 +123,9 @@ const checkPageName = () => {
 		case '/kalendarz.html':
 			modalFiles.forEach(file => file.addEventListener('click', toggleModal));
 			break;
+		case '/index.html':
+			modalFiles.forEach(file => file.addEventListener('click', toggleModal));
+			break;
 		case '/dokumenty.html':
 			menuBtns.forEach(btn => btn.addEventListener('click', filterMenu));
 			break;
@@ -141,11 +144,11 @@ const showNavOnScroll = () => {
 	}
 	// If current scroll is bigger than last scroll show the nav
 	else if (currentScroll < lastScroll && currentScroll > 0) {
-			navigation.style.position = 'fixed';
+		navigation.style.position = 'fixed';
 	} else {
 		navigation.style.position = 'relative';
 	}
-	
+
 	lastScroll = currentScroll;
 }
 

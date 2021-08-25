@@ -119,6 +119,7 @@ a {
 			width: 100%;
 		}
 	}
+
 }
 
 .p {
@@ -1040,6 +1041,7 @@ a[href^="tel"] {
 	width: auto;
 	height: 90vh;
 	object-fit: contain;
+	background: white;
 
 	@media screen and (max-width: $medium-display) {
 		width: 95%;

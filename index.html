@@ -147,6 +147,15 @@
 
 		</section>
 
+		<!-- Modal for bigger image -->
+		<div class="modal__container hidden" id='modal__container'>
+
+			<!-- Close modal btn -->
+			<button class="btn btn--close-modal" id='btn-close-modal' title='Close'>X</button>
+
+			<img src="" alt="" class="modal" id='modal'>
+		</div>
+
 		<!-- Section -->
 		<section class="section section--center">
 
@@ -155,11 +164,13 @@
 			<div class="container container--space-evenly">
 
 				<div class="img__container img__container--stretch">
-					<img src="./assets/informator.png" alt="Baner informacyjny na temat rejestracji" class="img">
+					<img src="./assets/informator.png" alt="Baner informacyjny na temat rejestracji"
+						class="img in-modal" loading='lazy'>
 				</div>
 
 				<div class="img__container img__container--stretch">
-					<img src="./assets/plakat.png" alt="Platak na temat rejestracji" class="img">
+					<img src="./assets/plakat.png" alt="Platak na temat rejestracji" class="img in-modal"
+						loading='lazy'>
 				</div>
 			</div>
 
