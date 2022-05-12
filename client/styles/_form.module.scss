@@ -1,0 +1,99 @@
+@use './variables' as *;
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+
+	// ADD MARGIN TOP TO ALL CHILDREN OF THE FORM ELEMENT APART FROM FIRST CHILD
+	&>* {
+		margin-top: $space-m;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.btn-container {
+		width: 100%;
+
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	button {
+		@include transition();
+		padding: $space-xs $space-m;
+	}
+
+	button[type=submit] {
+		border: 3px solid $color-secondary;
+		color: $color-secondary;
+		font-weight: 700;
+
+		width: 45%;
+
+		border-radius: $space-xs;
+
+		&:hover {
+			transform: scale(1.07);
+		}
+	}
+
+	button[type=reset] {
+		color: $color-secondary;
+		font-weight: 400;
+
+		width: 45%;
+
+		&:hover {
+			transform: scale(0.93);
+		}
+	}
+
+	// TABLET STYLE
+	@media screen and (max-width: $tablet-screen) {
+		max-width: 100%;
+	}
+}
+
+.label {
+	display: flex;
+	flex-direction: column;
+
+	color: $color-secondary;
+	text-align: left;
+
+	width: 25rem;
+
+	// TABLET STYLE
+	@media screen and (max-width: $tablet-screen) {
+		max-width: 100%;
+	}
+}
+
+.input,
+.textarea {
+	width: 100%;
+
+	margin-top: $space-xs;
+	padding: $space-xs;
+
+	border: 2px solid $color-secondary;
+	border-radius: $space-xs;
+
+	color: $color-secondary;
+
+	&:focus {
+		border: 2px solid $color-primary;
+	}
+}
+
+.textarea {
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 4rem;
+}

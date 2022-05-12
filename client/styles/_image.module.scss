@@ -1,0 +1,30 @@
+@use './variables' as *;
+
+.img-container {
+	width: auto;
+	height: auto;
+
+	border: 2px solid dodgerblue;
+
+	margin: $space-m;
+	padding: $space-s;
+
+	object-fit: cover;
+
+
+	@media screen and (max-width: $tablet-screen) {
+		margin: 0;
+		margin-bottom: $space-m;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.img {
+	width: 100%;
+	height: auto;
+
+	object-fit: contain;
+}

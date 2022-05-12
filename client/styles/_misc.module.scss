@@ -1,0 +1,275 @@
+@use 'variables' as *;
+
+.card {
+	width: 100%;
+	min-height: 40vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+
+	padding: $space-s;
+	border-radius: $space-m;
+
+	text-align: center;
+	background: $background-secondary;
+	color: $color-secondary;
+
+	@include transition();
+
+	&:hover {
+		transform: translate(0, -5px) scale(1.01);
+	}
+}
+
+.card-img {
+	width: 70%;
+	object-fit: contain;
+}
+
+.quote {
+	color: $color-highlight;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.text {
+	&--center {
+		text-align: center !important;
+	}
+
+	&--left {
+		text-align: left !important;
+	}
+
+	&--right {
+		text-align: right !important;
+	}
+}
+
+.link {
+	color: $color-primary;
+
+	display: inline-block;
+
+	&::after {
+		content: '';
+
+		width: 100%;
+		height: 2px;
+
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		background: $background-secondary;
+
+		transform: scaleX(0.3);
+		transform-origin: left;
+
+		@include transition();
+	}
+
+	&:hover {
+		color: $color-highlight;
+
+		&::after {
+			transform: scaleX(1);
+			background: $background-primary;
+		}
+	}
+}
+
+.grid-item {
+	width: 100%;
+	height: 40vh;
+
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 5px solid $background-secondary;
+	cursor: pointer;
+	overflow: hidden;
+
+	h4 {
+		position: relative;
+		z-index: 2;
+
+		color: $color-highlight;
+	}
+
+	a {
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		bottom: -100%;
+		z-index: 1;
+		background: $background-secondary;
+		opacity: 0.3;
+		@include transition();
+
+		// DONT ALLOW USERS TO CLICK ON THIS SO THAT THE LINKS CAN WORK
+		pointer-events: none;
+	}
+
+	&:nth-child(2n) {
+		background: $background-secondary;
+
+		h4 {
+			color: $color-secondary;
+		}
+
+		&::after {
+			background: $background-primary;
+		}
+	}
+
+	&:hover {
+		&::after {
+			bottom: 0;
+		}
+	}
+
+	// TABLET STYLE
+	@media screen and (max-width: $tablet-screen) {
+		height: 20vh;
+	}
+}
+
+.modal-container {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	@include flexCenter();
+
+	background: rgba($color-primary, 0.8);
+
+	// TABLET STYLE
+	@media screen and (max-width: $tablet-screen) {
+		padding: $space-s;
+	}
+}
+
+.modal {
+	width: fit-content;
+	height: fit-content;
+
+	@include flexCenter();
+
+	.btn-container {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: $space-s;
+	}
+
+	.btn {
+		color: $color-secondary;
+		font-weight: 400;
+		background: $background-secondary;
+		padding: $space-xs $space-s;
+	}
+
+	img {
+		width: auto;
+		height: 95vh;
+
+		// TABLET STYLE
+		@media screen and (max-width: $tablet-screen) {
+			height: auto;
+			width: 100%;
+		}
+	}
+}
+
+.flex {
+	&--column {
+		@include flexCenterColumn();
+	}
+}
+
+.iframe {
+	width: 70%;
+	height: 80vh;
+	border: 0;
+	box-shadow: 0 0 15px 2px rgba($color-primary, 0.2);
+
+	@media screen and (max-width: $mobile-screen) {
+		width: 100%;
+		height: 50vh;
+	}
+}
+
+.loader-container {
+	width: 100%;
+	height: 100vh;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	background: rgba($color-primary, 0.5);
+
+	@include flexCenter();
+
+	@media screen and (max-width: $mobile-screen) {
+		width: 100%;
+		min-height: 100vh;
+	}
+}
+
+.loader {
+	width: 15rem;
+	height: 15rem;
+	border: $space-m solid $background-secondary;
+	border-radius: 50%;
+
+	animation: loader 1s infinite;
+
+	@media screen and (max-width: $mobile-screen) {
+		width: $space-l;
+		height: $space-l;
+		border: $space-s solid $background-secondary;
+	}
+}
+
+.form-status {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	z-index: 1;
+
+	display: none;
+	align-items: center;
+	justify-content: center;
+
+	background: rgba($color-primary, 0.94);
+	color: $color-secondary;
+
+	padding: $space-l;
+
+	&--active {
+		display: flex;
+	}
+}

@@ -1,0 +1,310 @@
+@use './variables' as *;
+
+.nav {
+	height: 5rem;
+	width: 100%;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+
+	display: flex;
+	align-items: center;
+
+	padding: 0 $space-xl;
+	background: $background-secondary;
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		max-height: 4rem;
+
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		padding: 10px $space-s;
+	}
+}
+
+// NAV LOGO CONTAINER
+.logo-container {
+	height: 4rem;
+	width: 10%;
+
+	object-fit: cover;
+	cursor: pointer;
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		width: 25%;
+
+		flex-direction: column;
+	}
+}
+
+// LOGO IN NAV STYLING
+.logo {
+	height: 100%;
+	width: 100%;
+
+	object-fit: contain;
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		height: 4rem;
+	}
+}
+
+// CONTAINER FOR BURGER MENU
+.burger-container {
+	display: none;
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		width: 3rem;
+		height: 3rem;
+
+		top: $space-xs;
+		right: $space-m;
+		z-index: 2;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+
+		cursor: pointer;
+	}
+
+	// WHEN THE BURGER IS ACTIVE, THEN MAKE CROSS OUT OF LINES
+	&--active {
+		.burger {
+			&--1 {
+				transform: rotate(45deg) translate(0.5rem, 0.5rem);
+			}
+
+			&--2 {
+				opacity: 0;
+			}
+
+			&--3 {
+				transform: rotate(-45deg) translate(0.6rem, -0.6rem);
+			}
+		}
+	}
+}
+
+// BURGER MENU LINES
+.burger {
+	width: 100%;
+	height: 5px;
+
+	background: $color-secondary;
+
+	@include transition();
+}
+
+// MAIN NAV LIST
+.nav-ul {
+	display: flex;
+	width: 100%;
+	height: 100%;
+
+	background: $background-secondary;
+
+	@include transition();
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		max-height: 0;
+		width: 100%;
+
+		position: fixed;
+		top: 4rem;
+		left: 0;
+
+		flex-direction: column;
+		align-items: center;
+
+		overflow: auto;
+
+		// ON MOBILE IF NAV BURGER IS PRESSED THEN TOGGLE NAVIGATION
+		&--active {
+			height: fit-content;
+			max-height: 80vh;
+
+			position: fixed;
+
+			padding: $space-xs;
+			border-bottom: 4px solid $background-secondary;
+		}
+	}
+}
+
+// MAIN NAV LIST ITEM
+.nav-li {
+	width: 100%;
+	position: relative;
+
+	// ON HOVER OF LIST ITEMS SHOW THE RESPECTIVE SUBNAV LIST
+	&:hover {
+		.subnav-ul {
+			height: fit-content;
+			max-height: 40vh;
+
+			overflow: auto;
+			opacity: 1;
+		}
+	}
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		width: 90%;
+
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		// MOBILE HOVER, DO NOTHING BECAUSE CHECKBOX INPUT WILL TOGGLE THE SUBNAV
+		&:hover {
+
+			.subnav-ul {
+				opacity: 1;
+				height: 0;
+			}
+		}
+	}
+}
+
+// MAIN NAV LINKS
+.nav-a {
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: $color-secondary;
+	cursor: default;
+
+	i {
+		margin-left: $space-xs;
+		@include transition();
+	}
+
+	&:hover {
+		background: $background-primary;
+		color: $color-primary;
+
+		// ROTATE CHEVRON WHEN USER HOVERS OVER MENU ITEM
+		i {
+			transform: rotate(-180deg);
+		}
+	}
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		height: 5rem;
+
+		&:hover {
+			background: $background-secondary;
+			color: $color-secondary;
+		}
+	}
+}
+
+// TOGGLE LABEL THAT TRIGGERS THE SUBNAV TO SHOW/HIDE ON MOBILE
+.toggle-label {
+	pointer-events: none;
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		width: 100%;
+		height: 5rem;
+		pointer-events: all;
+	}
+}
+
+// TARGET ONLY INPUTS WHICH ARE CHECKBOXES
+input[type=checkbox] {
+	display: none;
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+
+		// WHEN CHECKBOX IS CHECKED, THEN SHOW SUBNAV 
+		&:checked+ul {
+			min-height: 10rem;
+
+			overflow-y: scroll;
+			opacity: 1;
+
+			&::-webkit-scrollbar {
+				@include scrollbar();
+			}
+		}
+	}
+}
+
+// SUBNAVIGATION HIDDEN FROM START ONLY SHOW WHEN TRIGGERED  
+.subnav-ul {
+	width: 100%;
+	max-height: 0;
+
+	overflow: hidden;
+	background: rgba($background-primary, 0.8);
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		min-height: 0;
+		max-height: 0;
+
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 1;
+
+		overflow: hidden;
+		opacity: 0;
+	}
+}
+
+// SUBNAVIGATION LIST ITEM
+.subnav-li {
+	padding: $space-xs;
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		text-align: center;
+	}
+}
+
+// SUBNAVIGATION LINK
+.subnav-a {
+	width: 100%;
+
+	padding: $space-s;
+	text-align: center;
+
+	&:hover {
+		background: $background-secondary;
+		color: $color-secondary;
+	}
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		max-width: fit-content;
+
+		&:hover {
+			background: $background-primary;
+			color: $color-primary;
+		}
+	}
+}

@@ -1,0 +1,65 @@
+@use 'variables' as *;
+
+.main {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: $space-xl;
+
+	// EACH CHILD OF MAIN SHOULD HAVE BOTTOM PADDING
+	&>* {
+		padding-bottom: $space-l;
+
+		// LAST CHILD SHOULD NOT HAVE A PADDING AS THE CONTAINER ALREADY HAS IT
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	// ORDERED & UNORDERED LISTS TO ALIGN THE LIST ITEMS TO THE LEFT
+	ol,
+	ul {
+		text-align: left;
+
+		// MAKE THE MARKERS FUNCTION AS INSIDE OF THE LIST SO THAT WE CAN CENTER PERFECTLY
+		// list-style-position: inside;
+
+		li {
+			padding-bottom: 1rem;
+
+			// EACH PARAGRAPH DIGIT 
+			&::marker {
+				color: $color-highlight;
+				font-weight: 600;
+			}
+
+			&:last-child {
+				padding: 0;
+			}
+		}
+
+		// MOBILE STYLING
+		@media screen and (max-width: $mobile-screen) {
+			// MAKE THE MARKERS FUNCTION AS INSIDE OF THE LIST SO THAT WE CAN CENTER PERFECTLY
+			list-style-position: inside;
+		}
+	}
+
+	// SHOW THE DISCS ON THE UNORDERED LIST
+	ul {
+		list-style: disc;
+	}
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		padding: $space-l;
+	}
+
+	// MOBILE STYLING
+	@media screen and (max-width: $mobile-screen) {
+		padding: $space-l $space-m;
+	}
+}

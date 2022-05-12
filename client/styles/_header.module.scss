@@ -1,0 +1,105 @@
+@use './variables' as *;
+
+.header {
+	width: 100%;
+	min-height: calc(80vh);
+
+	// MARGIN SET TO THE SIZE OF NAVIGATION
+	margin-top: 4rem;
+
+	padding: $space-l $space-xl;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(auto);
+	gap: 1rem;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		padding: $space-s;
+		background-position: left;
+	}
+
+	// MOBILE STYLING
+	@media screen and (max-width: $mobile-screen) {
+		min-height: 60vh;
+
+		padding: $space-s;
+		background-position: left;
+
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(4, auto);
+	}
+
+	&--index {
+		background-image: url('../public/index/background-index.png');
+	}
+
+	&--dlaczego-nasza-szkola {
+		background-image: url('../public/dlaczego-nasza-szkola/background-dlaczego-nasza-szkola.jpg');
+	}
+
+	&--kalendarz {
+		background-image: url('../public/kalendarz/background-kalendarz.png');
+	}
+
+	&--misja {
+		background-image: url('../public/misja/background-misja.jpg');
+	}
+
+	&--wizja {
+		background-image: url('../public/wizja/background-wizja.jpg');
+	}
+
+	&--patron {
+		background-image: url('../public/patron/background-patron.jpg');
+	}
+
+	&--program-nauczania {
+		background-image: url('../public/program-nauczania/background-program-nauczania.jpg');
+	}
+
+	&--szkolne-projekty {
+		background-image: url('../public/szkolne-projekty/background-szkolne-projekty.jpg');
+	}
+
+	&--partnerzy-szkoly {
+		background-image: url('../public/partnerzy-szkoly/background-partnerzy-szkoly.jpg');
+	}
+
+	&--kodeks-ucznia {
+		background-image: url('../public/kodeks/background-kodeks.jpg');
+	}
+
+	&--podreczniki {
+		background-image: url('../public/podreczniki/background-podreczniki.jpg');
+	}
+
+	&--obowiazki-rodzicow {
+		background-image: url('../public/obowiazki-rodzicow/background-obowiazki-rodzicow.jpg');
+	}
+
+	&--zapisy {
+		background-image: url('../public/zapisy/background-zapisy.jpg');
+	}
+
+	&--oplaty {
+		background-image: url('../public/oplaty/background-oplaty.jpg');
+	}
+
+	&--bezpieczenstwo-dzieci {
+		background-image: url('../public/bezpieczenstwo-dzieci/background-bezpieczenstwo-dzieci.jpg');
+	}
+
+	&--dokumenty {
+		background-image: url('../public/dokumenty/background-dokumenty.png');
+	}
+
+	&--kontakt {
+		background-image: url('../public/kontakt/background-kontakt.jpg');
+	}
+}

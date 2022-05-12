@@ -1,0 +1,56 @@
+$color-primary: rgb(50, 50, 50);
+$color-secondary: rgb(240, 240, 240);
+$color-highlight: rgb(0, 124, 182);
+
+$background-primary: rgb(240, 240, 240);
+$background-secondary: rgb(0, 124, 182);
+
+$space-xs: 10px;
+$space-s: 1rem;
+$space-m: 2rem;
+$space-xm: 4rem;
+$space-l: 6rem;
+$space-xl: 8rem;
+
+$font-1: 3rem;
+$font-2: 2.5rem;
+$font-3: 2rem;
+$font-4: 1.5rem;
+$font-5: 1rem;
+$font-6: 0.8rem;
+
+$tablet-screen: 900px;
+$mobile-screen: 600px;
+
+@mixin transition($target: all) {
+	transition: $target 0.3s ease;
+}
+
+@mixin flexCenter() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flexCenterColumn() {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin scrollbar {
+	::-webkit-scrollbar {
+		width: 10px;
+
+		background: rgb(223, 223, 223);
+
+		@media screen and (max-width: $tablet-screen) {
+			width: 5px;
+		}
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: rgb(163, 163, 163);
+	}
+}

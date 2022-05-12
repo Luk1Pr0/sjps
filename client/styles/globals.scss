@@ -1,0 +1,128 @@
+// IMPORT SCSS FILES
+@use './variables' as *;
+@use './nav.module';
+@use './header.module';
+@use './wrapper.module';
+@use './main.module';
+@use './footer.module';
+@use './misc.module';
+@use './image.module';
+@use './form.module';
+@use './animation.module';
+
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	font-family: 'Hind', sans-serif;
+}
+
+body {
+	width: 100%;
+	overflow-x: hidden;
+	background: $background-primary;
+	color: $color-primary;
+}
+
+a {
+	display: inline-block;
+
+	position: relative;
+
+	font-size: $font-5;
+	font-weight: 600;
+	text-decoration: none;
+
+	color: $color-primary;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	background: transparent;
+	border: 1px solid transparent;
+	cursor: pointer;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+
+h5 {
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 1rem;
+}
+
+strong {
+	color: $color-highlight;
+	font-weight: 700;
+}
+
+summary {
+	color: $color-primary;
+	font-weight: 600;
+	cursor: pointer;
+
+	&~ul li {
+		list-style-position: inside;
+	}
+
+	&~ol li {
+		list-style-position: inside;
+	}
+}
+
+label {
+	color: $color-highlight;
+	font-weight: 600;
+	font-size: $font-5;
+}
+
+input,
+textarea {
+	background: transparent;
+	outline: none;
+
+	&::placeholder {
+		color: inherit;
+		opacity: 0.6;
+	}
+}
+
+@include scrollbar();

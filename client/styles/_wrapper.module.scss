@@ -1,0 +1,133 @@
+@use './variables' as *;
+
+.heading-wrapper {
+	width: 100%;
+	height: fit-content;
+
+	grid-column: -1 / 3;
+	grid-row: 5;
+
+	padding: $space-m;
+	text-align: center;
+
+	background: $background-secondary;
+	color: $color-secondary;
+
+	border-radius: 2rem;
+
+	h1 {
+		font-size: $font-2;
+	}
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+
+		h1 {
+			font-size: $font-4;
+		}
+	}
+
+	// MOBILE STYLING
+	@media screen and (max-width: $mobile-screen) {
+		width: 100%;
+
+		grid-column: 1;
+		grid-row: 2;
+	}
+}
+
+.content-wrapper {
+	width: 45%;
+	text-align: center;
+
+	&--center {
+		align-self: center;
+	}
+
+	&--left {
+		align-self: flex-start;
+	}
+
+	&--right {
+		align-self: flex-end;
+	}
+
+	&--full-width {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		@media screen and (max-width: $tablet-screen) {
+			flex-direction: column;
+		}
+	}
+
+	h2,
+	h3 {
+		margin-bottom: $space-m;
+	}
+
+	p {
+		text-align: left;
+	}
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		width: 100%;
+	}
+}
+
+.card-wrapper {
+	height: fit-content;
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: $space-xm;
+
+	// TABLET STYLING
+	@media screen and (max-width: $tablet-screen) {
+		grid-template-columns: 1fr;
+	}
+
+	// MOBILE STYLING
+	@media screen and (max-width: $mobile-screen) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.grid-wrapper {
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+
+	@media screen and (max-width: $tablet-screen) {
+		grid-template-columns: 1fr;
+		row-gap: $space-m;
+	}
+}
+
+.form-wrapper {
+	width: 60%;
+
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: $space-xm;
+	border-radius: $space-m;
+
+	background: $background-secondary;
+
+	// TABLET STYLE
+	@media screen and (max-width: $tablet-screen) {
+		width: 100%;
+
+		padding: $space-m;
+	}
+}

@@ -1,0 +1,17 @@
+const express = require('express');
+const app = express();
+const cors = require('cors');
+require('dotenv').config();
+
+// MIDDLEWARE
+app.use(express.json());
+app.use(cors());
+
+// IMPORT ROUTES
+const kontaktRoutes = require('./routes/kontaktRoute');
+
+// USE IMPORTED ROUTES
+app.use('/kontakt', kontaktRoutes);
+
+// START SERVER
+app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`));
